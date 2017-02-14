@@ -16,15 +16,15 @@ var USER_DATA = {
 
 var TopImage = React.createClass({
   render: function () {
-    return (
+    return
+//
+//  <ImageUrl url={this.props.user.url}>
+// <ImageView image={this.props.user.image} />
+//
+//   <h3><ImageTitle name = {this.props.user.name}/></h3>
+// </ImageUrl>
 
- <ImageUrl url={this.props.user.url}>
-<ImageView image={this.props.user.image} />
-
-  <h3><ImageTitle name = {this.props.user.name}/></h3>
-</ImageUrl>
-
-    )
+    <div>Image Url</div>
   }
 })
 

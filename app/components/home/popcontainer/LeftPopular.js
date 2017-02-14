@@ -1,6 +1,6 @@
 var React = require('react')
 var styles = require('../../../styles')
-var TopImage = require('./TopImages')
+var TopImages = require('./TopImages')
 
 
 var LeftPopular= React.createClass({
