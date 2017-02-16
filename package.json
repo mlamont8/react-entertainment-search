@@ -3,19 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
     "production": "webpack -p",
     "start": "webpack-dev-server"
   },
-  "author": "",
+  "author": "M Lamont Taylor",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.15.3",
+    "fetch-jsonp": "^1.0.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "^3.0.2",
-    "superagent": "^3.4.3"
+    "react-router": "^3.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -25,5 +23,4 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   }
-
 }

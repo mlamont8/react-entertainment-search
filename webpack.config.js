@@ -4,13 +4,7 @@ var HtmlwebpackPluginConfig = new HtmlWebpackPlugin({
   filename: 'index.html',
   inject: 'body'
 });
-// var webpackConfig = {
-//   devServer:{
-//     headers:{
-//       "Access-Control-Allow-Origin": "*"
-//     }
-//   }
-//   };
+
 module.exports = {
   entry: [
     './app/index.js'
