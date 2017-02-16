@@ -15,6 +15,9 @@ leftPop: {
 },
 rightPopImg: {
   height: '175px'
+},
+headerFont: {
+  'font-family': "'Open Sans Condensed', sans-serif"
 }
 }
 

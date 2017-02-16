@@ -1,15 +1,16 @@
 var React = require('react');
+var styles = require('../styles');
 
 var Header = React.createClass({
   render: function () {
     return(
 
 <header>
-<nav className="indigo darken-4">
+<nav className="black">
   <div className="nav-wrapper">
     <span className="brand-logo hide-on-med-and-down">Entertainment Search</span>
 {/* <!--Full sized Nav  --> */}
-    <ul id="nav-full" className="right hide-on-med-and-down white-text">
+    <ul id="nav-full" className="right hide-on-med-and-down white-text" style={styles.headerFont}>
       <li className="active"><a className="white-text" href="/">Home</a></li>
       <li><a  className="white-text" href="/movies">Movies</a></li>
      <li><a className="white-text" href="/tv">TV Shows</a></li>
