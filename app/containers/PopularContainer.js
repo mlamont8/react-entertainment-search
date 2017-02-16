@@ -8,19 +8,21 @@ var PopularHelper = require('../utils/PopularHelper');
 var PopularContainer = React.createClass({
   getInitialState: function (){
     return {
-
       frontPageInfo: []
     }
   },
 
-  componentDidMount: function (){
-    PopularHelper.getPopMovieInfo(['movie', 'tv'])
-    .then(function (retData){
+  componentDidMount: function () {
+    var retData = (PopularHelper.getApiInfo('movie')).bind(this)
+
+        console.log('return data',retData);
       this.setState({
-        frontPageInfo: [retData[0], retData[1]]
-      })
-    }.bind(this)
-  )
+        frontPageInfo: retData
+    }).bind(this)
+    console.log('componentDidMount',state);
+
+
+
 },
   // componentDidMount: function (){
   //   PopularHelper.getPopMovieInfo()
