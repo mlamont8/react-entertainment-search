@@ -1,12 +1,16 @@
 var React = require('react')
 
-var ImageView = React.createClass({
 
-  render: function (){
+
+
+var ImageView = function(props){
+
+
     return (
-        <img src = {this.props.image} />
+        <p>image</p>
+        // <img src = {'https://image.tmdb.org/t/p/w780' + this.props.image} />
     )
-  }
-});
+
+}
 
 module.exports = ImageView;

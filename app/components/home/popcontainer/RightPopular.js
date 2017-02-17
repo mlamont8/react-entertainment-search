@@ -1,11 +1,12 @@
+// Right Movie Container of Home Page
 var React = require('react');
 
 
 var RightPopular= React.createClass({
   render: function () {
     return(
-      <div class="rightContainer col s12 m12 l6">
-
+      <div class="rightContainer red col s12 m6 l6">
+        <p>Right Movie Container</p>
  </div>
     )
   }
