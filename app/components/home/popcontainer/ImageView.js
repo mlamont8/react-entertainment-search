@@ -7,8 +7,10 @@ var ImageView = function(props){
 
 
     return (
+      <div>
         <p>image</p>
-        // <img src = {'https://image.tmdb.org/t/p/w780' + this.props.image} />
+        <img src = {'https://image.tmdb.org/t/p/w780' + this.props.image} />
+      </div>
     )
 
 }

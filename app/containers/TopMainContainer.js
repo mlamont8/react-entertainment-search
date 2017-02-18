@@ -44,7 +44,7 @@ var TopMainContainer= React.createClass({
     return(
       <div className="row topMainContainer"  style={styles.mostPopularStyle}>
         <LeftPopular
-          frontMovieInfo={this.state.frontMovieInfo}
+          frontMovieInfo={this.state.frontMovieInfo[0]}
         />
         <RightPopular
           frontMovieInfo={this.state.frontMovieInfo}
