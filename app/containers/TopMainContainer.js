@@ -5,14 +5,14 @@ var RightPopular = require('../components//home/popcontainer/RightPopular');
 var fetchJsonp = require('fetch-jsonp');
 var styles = require('../styles');
 
-
-
-
-
 var TopMainContainer= React.createClass({
   getInitialState: function (){
     return {
-      frontMovieInfo: []
+
+      BigImage: '',
+      BigTitle: '',
+      SmallImage: [],
+      SmallTitle: []
     }
   },
 
@@ -24,32 +24,33 @@ var TopMainContainer= React.createClass({
     // This API prefers calls using jsonp
     return fetchJsonp('http://api.themoviedb.org/3/movie/popular/?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=1')
     .then (function(response){
-      console.log(response);
-      return response.json()
+        return response.json()
     }).then(function(json) {
       //set state for results
-      this.setState({frontMovieInfo: json.results});
+      this.setState({
+        BigImage: json.results[0].backdrop_path,
+        BigTitle: json.results[0].title,
+        smallImage: json.results.backdrop_path,
+        SmallTitle: json.results.backdrop_path
+
+      });
       }.bind(this))
     .catch(function(ex) {
       console.log('PopularFetch Movie Failure', ex)
     })
     },
 
-
-
-
-
-
   render: function () {
     return(
       <div className="row topMainContainer"  style={styles.mostPopularStyle}>
         <LeftPopular
-          frontMovieInfo={this.state.frontMovieInfo[0]}
+          BigImage={this.state.BigImage}
+          BigTitle={this.state.BigTitle}
         />
         <RightPopular
           frontMovieInfo={this.state.frontMovieInfo}
         />
-        <a>top Info</a>
+
  </div>
     )
   }

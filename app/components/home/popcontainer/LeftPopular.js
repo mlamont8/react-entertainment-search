@@ -3,6 +3,7 @@ var React = require('react')
 var styles = require('../../../styles')
 var TopImages = require('./TopImages')
 var ImageView = require('./ImageView')
+var ImageTitle = require('./ImageTitle')
 
 
 var LeftPopular= React.createClass({
@@ -10,9 +11,12 @@ var LeftPopular= React.createClass({
   render: function () {
     return(
       <div className="leftContainer blue imgBlock col s12 m6 l6" style={styles.leftPop}>
-          <span>left container</span>
-          {/* <ImageView image = {this.props}> </ImageView> */}
-              {/* <p>  {this.props.frontMovieInfo} </p> */}
+
+          <ImageView
+            imageSrc = {this.props.BigImage}>
+            </ImageView>
+            <ImageTitle
+              title = {this.props.BigTitle} />
 
         </div>
 

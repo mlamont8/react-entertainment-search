@@ -8,17 +8,41 @@ var styles = {
   },
   mostPopularStyle: {
 	height: '350px',
-  width: '100%'
+  width: '100%',
+  margin: 0
+
 },
 leftPop: {
-  height: '350px'
+  height: '350px',
+  padding: 0,
+  position: 'relative'
 },
 rightPopImg: {
   height: '175px'
 },
 headerFont: {
-  'font-family': "'Open Sans Condensed', sans-serif"
+  fontFamily: "'Open Sans Condensed', sans-serif"
+},
+rightPop: {
+  padding: 0,
+  height: '350px'
+},
+largeImage: {
+  height: '350px',
+  maxWidth: '100%',
+  objectFit: 'cover'
+},
+titleStyle: {
+  fontSize: '24px',
+  fontWeight: '300',
+  color: '#fff',
+  position: 'absolute',
+  margin: '40px',
+  left: '0',
+  bottom: 0,
+  width: '100px'
 }
+
 }
 
 module.exports = styles;
