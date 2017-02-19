@@ -10,7 +10,7 @@ var LeftPopular= React.createClass({
 
   render: function () {
     return(
-      <div className="leftContainer blue imgBlock col s12 m6 l6" style={styles.leftPop}>
+      <div className="leftContainer blue imgBlock col s12 m12 l6" style={styles.leftPop}>
 
           <ImageView
             imageSrc = {this.props.BigImage}>

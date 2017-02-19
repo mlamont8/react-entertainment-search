@@ -40,7 +40,10 @@ titleStyle: {
   margin: '40px',
   left: '0',
   bottom: 0,
-  width: '100px'
+  width: '100px',
+  backgroundColor: 'rgba(0,0,0,0.5)',
+  borderRadius: '10px',
+  padding: '8px'
 }
 
 }
