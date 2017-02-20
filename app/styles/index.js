@@ -44,7 +44,11 @@ titleStyle: {
   backgroundColor: 'rgba(0,0,0,0.5)',
   borderRadius: '10px',
   padding: '8px'
+},
+smallImage: {
+  objectFit: 'cover'
 }
+
 
 }
 

@@ -30,8 +30,8 @@ var BottomMainContainer= React.createClass({
       this.setState({
         BigImage: json.results[0].backdrop_path,
         BigTitle: json.results[0].name,
-        SmallImage: [json.results[1].backdrop_path,json.results[2].backdrop_path,json.results[3].backdrop_path,json.results[4].backdrop_path],
-        SmallTitle: [json.results[1].name,json.results[2].name,json.results[3].name,json.results[4].name]
+        // SmallImage: [json.results[1].backdrop_path,json.results[2].backdrop_path,json.results[3].backdrop_path,json.results[4].backdrop_path],
+        // SmallTitle: [json.results[1].name,json.results[2].name,json.results[3].name,json.results[4].name]
 
 
       });
@@ -48,10 +48,10 @@ var BottomMainContainer= React.createClass({
           BigImage={this.state.BigImage}
           BigTitle={this.state.BigTitle}
         />
-        <RightPopular
+        {/* <RightPopular
           SmallImages={this.state.SmallImage}
           SmallTitle={this.state.SmallTitle}
-        />
+        /> */}
 
  </div>
     )

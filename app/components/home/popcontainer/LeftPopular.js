@@ -13,7 +13,9 @@ var LeftPopular= React.createClass({
       <div className="leftContainer blue imgBlock col s12 m12 l6" style={styles.leftPop}>
 
           <ImageView
-            imageSrc = {this.props.BigImage}>
+            imageSrc = {this.props.BigImage}
+            imageclass = 'test'
+            >
             </ImageView>
             <ImageTitle
               title = {this.props.BigTitle} />
