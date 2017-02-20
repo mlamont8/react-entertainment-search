@@ -1,8 +1,8 @@
-var React = require('react');
-var Header = require('./Header');
+import React from 'react';
+import Header from './Header';
 
-var Main = React.createClass({
-  render: function () {
+class Main extends React.Component {
+  render() {
     return(
       <div>
         <Header />
@@ -10,6 +10,17 @@ var Main = React.createClass({
     </div>
     )
   }
-});
+}
+
+// var Main = React.createClass({
+//   render: function () {
+//     return(
+//       <div>
+//         <Header />
+//       {this.props.children}
+//     </div>
+//     )
+//   }
+// });
 
 module.exports = Main;

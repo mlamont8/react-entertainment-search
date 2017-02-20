@@ -28,9 +28,9 @@ var RightPopular= React.createClass({
 
         } */}
 
-        { this.props.SmallImage.map(SmallImage =>
+        {/* { this.props.SmallImage.map(SmallImage =>
           <ImageView imageSrc={SmallImage}></ImageView>
-        )}
+        )} */}
 
       </div>
     )
