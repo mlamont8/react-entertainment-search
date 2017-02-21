@@ -8,17 +8,12 @@ var styles = require('../../../styles')
 
 var RightPopular= React.createClass({
 
-  // getInitialState : function() {
-  //   return {
-  //     smallImage: []
-  //   }
-  // },
-//   componentDidMount: function () {
-//
-//   this.setState({
-//     smallImage: this.props.SmallImage
-//   })
-// },
+  getInitialState : function() {
+    return {
+      style: 'smallImageStyle'
+    }
+  },
+
 
 
   render: function () {
@@ -28,7 +23,9 @@ var RightPopular= React.createClass({
 
         { this.props.SmallImage.map(SmallImage =>
       <div className='imgBlock col s6 m6'>
-          <ImageView imageSrc={SmallImage} />
+          <ImageView imageSrc={SmallImage}
+          imageStyle = {this.state.style}
+           />
       </div>
 
         )}
@@ -42,10 +39,6 @@ var RightPopular= React.createClass({
   }
 })
 
-// RightPopular.propTypes = {
-//   SmallImage: PropTypes.array.isRequired,
-//   SmallTitle: PropTypes.array.isRequired
-//
-// }
+
 
 module.exports = RightPopular;

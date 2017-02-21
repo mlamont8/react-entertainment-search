@@ -28,7 +28,7 @@ rightPop: {
   height: '350px'
 },
 largeImage: {
-  height: '350px',
+  height: '100%',
   maxWidth: '100%',
   objectFit: 'cover'
 },
@@ -45,7 +45,7 @@ titleStyle: {
   borderRadius: '10px',
   padding: '8px'
 },
-smallImage: {
+smallImageStyle: {
   objectFit: 'cover'
 }
 
