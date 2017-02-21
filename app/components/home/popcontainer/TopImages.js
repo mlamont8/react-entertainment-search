@@ -8,7 +8,7 @@ var ImageTitle = require('./ImageTitle');
 var USER_DATA = {
   image: "https://image.tmdb.org/t/p/w780/o9OKe3M06QMLOzTl3l6GStYtnE9.jpg",
   name: "Movie Name 1",
-  url: "http://www.google.com"
+
 
 }
 
