@@ -1,7 +1,7 @@
 // Right Movie Container of Home Page
 var React = require('react');
 var PropTypes = React.PropTypes;
-var ImageView = require('./ImageView')
+var ImageViewRight = require('./ImageViewRight')
 var ImageTitle = require('./ImageTitle')
 var styles = require('../../../styles')
 
@@ -18,12 +18,12 @@ var RightPopular= React.createClass({
 
   render: function () {
     return(
-      <div className="rightContainer col s12 m12 l6">
+      <div className="rightContainer col s12 m12 l6" style={{padding: 0}}>
 
 
         { this.props.SmallImage.map(SmallImage =>
-      <div className='imgBlock col s6 m6'>
-          <ImageView imageSrc={SmallImage}
+      <div className='imgBlock col s6 m6' style={styles.rightPop}>
+          <ImageViewRight imageSrc={SmallImage}
           imageStyle = {this.state.style}
            />
       </div>

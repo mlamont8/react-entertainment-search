@@ -14,7 +14,7 @@ var LeftPopular= React.createClass({
 
           <ImageView
             imageSrc = {this.props.BigImage}
-            imageclass = 'test'
+            
             >
             </ImageView>
             <ImageTitle

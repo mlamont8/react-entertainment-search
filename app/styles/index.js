@@ -25,7 +25,8 @@ headerFont: {
 },
 rightPop: {
   padding: 0,
-  height: '350px'
+  height: '175px',
+  position: 'relative'
 },
 largeImage: {
   height: '100%',
