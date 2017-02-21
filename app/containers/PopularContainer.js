@@ -9,7 +9,7 @@ var PopularContainer = React.createClass({
 
 render: function () {
   return(
-      <div className="mostPopularFull">
+      <div className="mostPopularFull" style={{backgroundColor: '#000000'}}>
         <TopContainer />
         <BottomContainer />
 
