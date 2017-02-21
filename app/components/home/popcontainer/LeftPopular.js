@@ -14,11 +14,11 @@ var LeftPopular= React.createClass({
 
           <ImageView
             imageSrc = {this.props.BigImage}
-            
+
             >
             </ImageView>
-            <ImageTitle
-              title = {this.props.BigTitle} />
+            {/* <ImageTitle
+              title = {this.props.BigTitle} /> */}
 
         </div>
 

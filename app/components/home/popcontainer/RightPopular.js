@@ -8,13 +8,6 @@ var styles = require('../../../styles')
 
 var RightPopular= React.createClass({
 
-  getInitialState : function() {
-    return {
-      style: 'smallImageStyle'
-    }
-  },
-
-
 
   render: function () {
     return(
@@ -24,8 +17,10 @@ var RightPopular= React.createClass({
         { this.props.SmallImage.map(SmallImage =>
       <div className='imgBlock col s6 m6' style={styles.rightPop}>
           <ImageViewRight imageSrc={SmallImage}
-          imageStyle = {this.state.style}
+
            />
+           {/* <ImageTitle
+             title = {this.props.SmallTitle} /> */}
       </div>
 
         )}

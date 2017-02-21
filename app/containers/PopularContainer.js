@@ -11,7 +11,7 @@ render: function () {
   return(
       <div className="mostPopularFull">
         <TopContainer />
-        {/* <BottomContainer /> */}
+        <BottomContainer />
 
       </div>
 

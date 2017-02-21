@@ -6,6 +6,7 @@ var fetchJsonp = require('fetch-jsonp');
 var styles = require('../styles');
 
 var TopMainContainer= React.createClass({
+
   getInitialState: function (){
     return {
 
