@@ -1,8 +1,9 @@
-var React = require('react');
-var Header = require('./Header');
+var React = require('react')
+var Header = require('./Header')
 
-var Main = React.createClass({
-  render: function () {
+
+class Main extends React.Component {
+  render() {
     return(
       <div>
         <Header />
@@ -10,6 +11,7 @@ var Main = React.createClass({
     </div>
     )
   }
-});
+}
+
 
 module.exports = Main;

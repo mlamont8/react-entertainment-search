@@ -24,12 +24,7 @@ var RightPopular= React.createClass({
   render: function () {
     return(
       <div className="rightContainer col s12 m12 l6">
-        {/* {
-          this.props.SmallImage.map(function(i){
-            return (<ImageView imageSrc={this} />)
-          })
 
-        } */}
 
         { this.props.SmallImage.map(SmallImage =>
       <div className='imgBlock col s6 m6'>
@@ -38,8 +33,9 @@ var RightPopular= React.createClass({
 
         )}
 
-        {/* <ImageView imageSrc={this.props.SmallImage[1]}></ImageView>
-        <ImageTitle title={this.props.SmallTitle[1]}></ImageTitle> */}
+
+
+
 
       </div>
     )

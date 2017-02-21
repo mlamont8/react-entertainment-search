@@ -6,12 +6,12 @@ var BottomContainer = require('./BottomMainContainer');
 
 
 var PopularContainer = React.createClass({
-  
+
 render: function () {
   return(
       <div className="mostPopularFull">
         <TopContainer />
-        <BottomContainer />
+        {/* <BottomContainer /> */}
 
       </div>
 
