@@ -11,9 +11,8 @@ var TopMainContainer= React.createClass({
     return {
 
       BigImage: '',
-      BigTitle: '',
       SmallImage: [],
-      SmallTitle: []
+
     }
   },
 
@@ -30,9 +29,7 @@ var TopMainContainer= React.createClass({
       //set state for results
       this.setState({
         BigImage: json.results[0].backdrop_path,
-        BigTitle: json.results[0].title,
-        SmallImage: [json.results[1].backdrop_path,json.results[2].backdrop_path,json.results[3].backdrop_path,json.results[4].backdrop_path],
-        SmallTitle: [json.results[1].title,json.results[2].title,json.results[3].title,json.results[4].title]
+        SmallImage: [json.results[1].backdrop_path,json.results[2].backdrop_path,json.results[3].backdrop_path,json.results[4].backdrop_path]
 
       });
       }.bind(this))
@@ -46,11 +43,11 @@ var TopMainContainer= React.createClass({
       <div className="row topMainContainer"  style={styles.mostPopularStyle}>
         <LeftPopular
           BigImage={this.state.BigImage}
-          BigTitle={this.state.BigTitle}
+
         />
         <RightPopular
           SmallImage={this.state.SmallImage}
-          SmallTitle={this.state.SmallTitle}
+    
         />
 
  </div>
