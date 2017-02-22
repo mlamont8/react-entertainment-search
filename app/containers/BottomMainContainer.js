@@ -29,9 +29,6 @@ var BottomMainContainer= React.createClass({
       this.setState({
         BigImage: json.results[0].backdrop_path,
         SmallImage: [json.results[1].backdrop_path,json.results[2].backdrop_path,json.results[3].backdrop_path,json.results[4].backdrop_path]
-
-
-
       });
       }.bind(this))
     .catch(function(ex) {
