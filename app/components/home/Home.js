@@ -6,7 +6,7 @@ var Home = React.createClass({
   render: function () {
     return(
       <div>
-    <SectionTitle />
+    
     <PopularContainer />
     </div>
     )

@@ -31,7 +31,8 @@ rightPop: {
 largeImage: {
   height: '100%',
   maxWidth: '100%',
-  objectFit: 'cover'
+  objectFit: 'cover',
+  opacity: '0.8'
 },
 titleStyle: {
   fontSize: '24px',
