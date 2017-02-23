@@ -4,11 +4,15 @@ var React = require('react')
 function Search (){
   return(
     <div className="search-form row" >
-  <form className="col s12" ng-submit="search()">
+  <form className="col s12" onSubmit={props.searchTerm}>
   <div className="row">
 
     <div className="inputField col s6 white-text">
-    <input placeholder = "Search for" id="searchInput" type="text" ng-model="searchTerm" />
+    <input
+      placeholder = "Search for"
+      id="searchInput"
+      type="text"
+       />
   </div>
 
   </div>

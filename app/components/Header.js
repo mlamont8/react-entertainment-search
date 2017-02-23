@@ -25,7 +25,7 @@ var Header = React.createClass({
    <ul id="mobile-nav" className="black-text side-nav">
       <li><Link className="black-text" activeClassName="active" to="/">Home</Link></li>
       <li><Link  className="black-text" activeClassName="active" to="/explore/movies">Movies</Link></li>
-     <li><a className="black-text" activeClassName="active" to="/explore/tv">TV Shows</a></li>
+     <li><Link className="black-text" activeClassName="active" to="/explore/tv">TV Shows</Link></li>
      </ul>
 
   </div>
