@@ -1,5 +1,7 @@
 var React = require('react');
 var styles = require('../styles');
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
 
 var Header = React.createClass({
   render: function () {
@@ -11,9 +13,9 @@ var Header = React.createClass({
     <span className="brand-logo hide-on-med-and-down">Entertainment Search</span>
 {/* <!--Full sized Nav  --> */}
     <ul id="nav-full" className="right hide-on-med-and-down white-text" style={styles.headerFont}>
-      <li className="active"><a className="white-text" href="/">Home</a></li>
-      <li><a  className="white-text" href="/movies">Movies</a></li>
-     <li><a className="white-text" href="/tv">TV Shows</a></li>
+      <li className="active"><Link className="white-text" to="/">Home</Link></li>
+      <li><Link className="white-text" activeClassName="active" to="/explore/movies">Movies</Link></li>
+     <li><Link className="white-text" activeClassName="active" to="/explore/tv">TV Shows</Link></li>
      </ul>
      {/* <!-- Mobile Button --> */}
         <a href="#" className="button-collapse" data-activates="mobile-nav" data-sidenav="left" data-closeonclick="true" data-menuwidth="100">
@@ -21,9 +23,9 @@ var Header = React.createClass({
 </a>
 {/* <!-- Mobile Sidenav Menu --> */}
    <ul id="mobile-nav" className="black-text side-nav">
-      <li className="active"><a className="black-text" href="/">Home</a></li>
-      <li><a  className="black-text" href="/movies">Movies</a></li>
-     <li><a className="black-text" href="/tv">TV Shows</a></li>
+      <li><Link className="black-text" activeClassName="active" to="/">Home</Link></li>
+      <li><Link  className="black-text" activeClassName="active" to="/explore/movies">Movies</Link></li>
+     <li><a className="black-text" activeClassName="active" to="/explore/tv">TV Shows</a></li>
      </ul>
 
   </div>

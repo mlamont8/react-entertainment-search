@@ -12,7 +12,7 @@ var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='explore' component={ExploreContainer}/>
+      <Route path='explore/:entType' component={ExploreContainer}/>
     </Route>
   </Router>
 );
