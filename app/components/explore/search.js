@@ -19,7 +19,8 @@ onSubmitTerm: function (e){
   e.preventDefault();
   var searchTerm = this.state.searchTerm;
   this.setState({
-    searchTerm: ''
+    searchTerm: '',
+    searchItem: searchTerm
   });
 
 
