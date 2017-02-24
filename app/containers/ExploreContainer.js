@@ -1,6 +1,7 @@
 var React = require('react')
 var Search = require('../components/explore/search')
 var ExploreHelper = require('../utils/exploreHelper')
+var DisplayGridContainer = require('./DisplayGridContainer')
 
 
 var ExploreContainer = React.createClass({
@@ -57,6 +58,7 @@ ExploreHelper.getExploreInfo()
     return(
       <div style={{backgroundColor: '#000000'}}>
         <Search />
+        <DisplayGridContainer data={this.state.apiInfo} />
 
       </div>
     )

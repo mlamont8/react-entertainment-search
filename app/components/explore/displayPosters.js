@@ -1,11 +1,13 @@
 var React = require('react');
 
+
 var displayPosters = function(props){
-  render: function (){
+
     return (
         <div>
+          <img src= {'https://image.tmdb.org/t/p/w92' + props.imageSrc} />
         </div>
-    )}
+    )
 
 }
 
