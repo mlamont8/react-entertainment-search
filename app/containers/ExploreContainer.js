@@ -1,5 +1,5 @@
 var React = require('react')
-var Search = require('../components/explore/search')
+var Search = require('../components/explore/Search')
 var ExploreHelper = require('../utils/exploreHelper')
 var DisplayGridContainer = require('./DisplayGridContainer')
 

@@ -1,5 +1,5 @@
 var React = require('react')
-var displayPosters = require('../components/explore/displayPosters')
+var DisplayPosters = require('../components/explore/DisplayPosters')
 
 var DisplayGridContainer = React.createClass({
 
@@ -9,7 +9,7 @@ render: function(){
 
         {this.props.data.map(data =>
         <div className='col s6 m2'>
-          <displayPosters posterSrc={data.poster_path} />
+          <DisplayPosters posterSrc={data.poster_path} />
         </div>)}
     </div>
 
