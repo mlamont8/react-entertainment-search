@@ -14,7 +14,7 @@ var Header = React.createClass({
 {/* <!--Full sized Nav  --> */}
     <ul id="nav-full" className="right hide-on-med-and-down white-text" style={styles.headerFont}>
       <li className="active"><Link className="white-text" to="/">Home</Link></li>
-      <li><Link className="white-text" activeClassName="active" to="/explore/movies">Movies</Link></li>
+      <li><Link className="white-text" activeClassName="active" to="/explore/movie">Movies</Link></li>
      <li><Link className="white-text" activeClassName="active" to="/explore/tv">TV Shows</Link></li>
      </ul>
      {/* <!-- Mobile Button --> */}
@@ -24,7 +24,7 @@ var Header = React.createClass({
 {/* <!-- Mobile Sidenav Menu --> */}
    <ul id="mobile-nav" className="black-text side-nav">
       <li><Link className="black-text" activeClassName="active" to="/">Home</Link></li>
-      <li><Link  className="black-text" activeClassName="active" to="/explore/movies">Movies</Link></li>
+      <li><Link  className="black-text" activeClassName="active" to="/explore/movie">Movies</Link></li>
      <li><Link className="black-text" activeClassName="active" to="/explore/tv">TV Shows</Link></li>
      </ul>
 

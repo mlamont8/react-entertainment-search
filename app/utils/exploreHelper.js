@@ -3,8 +3,10 @@ var fetchJsonp = require('fetch-jsonp')
 
 
 var helpers = {
-  getExploreInfo: function (){
-    return fetchJsonp('https://api.themoviedb.org/3/movie/popular?api_key=21b0daca9dad79653c91d176b7930bee&sort_by=popularity.desc')
+  getExploreInfo: function (type){
+    console.log('type',type)
+    
+    return fetchJsonp('https://api.themoviedb.org/3/'+type+'/popular?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=1&callback=test')
   .then (function(response){
     console.log(response)
       return response.json()

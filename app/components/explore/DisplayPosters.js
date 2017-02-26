@@ -5,7 +5,7 @@ var displayPosters = function(props){
 
     return (
 
-          <img src = {'https://image.tmdb.org/t/p/w92' + props.imageSrc} />
+          <img src = {'https://image.tmdb.org/t/p/w154' + props.posterSrc} />
 
     )
 

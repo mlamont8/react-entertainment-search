@@ -12,7 +12,8 @@ var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='explore/:entType' component={ExploreContainer}/>
+      <Route path='explore/tv' type = 'tv' component={ExploreContainer}/>
+      <Route path='explore/movie' type = 'movie' component={ExploreContainer}/>
     </Route>
   </Router>
 );

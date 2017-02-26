@@ -2,7 +2,7 @@ var React = require('react')
 var Search = require('../components/explore/Search')
 var ExploreHelper = require('../utils/exploreHelper')
 var DisplayGridContainer = require('./DisplayGridContainer')
-
+var ReactPaginate = require('react-paginate')
 
 var ExploreContainer = React.createClass({
 
@@ -26,7 +26,8 @@ GetUrl: function (SearchTerm) {
 },
 
 componentDidMount: function (){
-ExploreHelper.getExploreInfo()
+  var type = this.props.route.type
+ExploreHelper.getExploreInfo(type)
 .then(function (data){
   console.log('excontain',data)
   this.setState({
@@ -34,31 +35,57 @@ ExploreHelper.getExploreInfo()
   })
 }.bind(this)
 )
-//  return fetchJsonp(this.GetUrl)
-  //   return fetchJsonp('https://api.themoviedb.org/3/movie/popular?api_key=21b0daca9dad79653c91d176b7930bee&sort_by=popularity.desc')
-  // .then (function(response){
-  //   console.log(response)
-  //     return response.json()
-  // }).then(function(json) {
-  //   //set state for results
-  //   console.log(json)
-  //   // this.setState({
-  //   //   BigImage: json.results[0].backdrop_path,
-  //   //   SmallImage: [json.results[1].backdrop_path,json.results[2].backdrop_path,json.results[3].backdrop_path,json.results[4].backdrop_path]
-  //   // });
-  //   }.bind(this))
-  // .catch(function(ex) {
-  //   console.log('PopularFetch Movie Failure', ex)
-  // })
+
+
+},
+
+componentWillReceiveProps: function (nextProps){
+  if(JSON.stringify(this.props.route.type) !== JSON.stringify(nextProps.route.type))
+  // Check if type actually changed
+    {
+  var type = nextProps.route.type
+ExploreHelper.getExploreInfo(type)
+.then(function (data){
+  console.log('update',type)
+  this.setState({
+    apiInfo: data
+  })
+}.bind(this)
+)
+}
+},
+
+PageChange: function (){
+    var type = this.props.params.type
+    var page = this.props.page
+    ExploreHelper.getExploreInfo(type,page)
+    .then(function (data){
+      console.log('pagechange',data, page)
+      this.setState({
+        apiInfo: data
+      })
+    }.bind(this)
+    )
 
 },
 
 
   render: function () {
     return(
-      <div style={{backgroundColor: '#000000'}}>
+      <div style={{backgroundColor: '#000001'}}>
         <Search />
-        <DisplayGridContainer data={this.state.apiInfo} />
+        <ReactPaginate previousLabel={"previous"}
+               nextLabel={"next"}
+               breakLabel={<a href="">...</a>}
+               breakClassName={"break-me"}
+               pageCount={this.state.total_pages}
+               marginPagesDisplayed={2}
+               pageRangeDisplayed={5}
+               onPageChange = {this.PageChange}
+               containerClassName={"pagination"}
+               subContainerClassName={"pages pagination"}
+               activeClassName={"active"} />
+        <DisplayGridContainer data={this.state.apiInfo} type={this.props.params.entType}/>
 
       </div>
     )
