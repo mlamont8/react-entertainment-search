@@ -8,12 +8,12 @@ var Header = React.createClass({
     return(
 
 <header>
-<nav className="black">
+<nav>
   <div className="nav-wrapper">
     <span className="brand-logo hide-on-med-and-down">Entertainment Search</span>
 {/* <!--Full sized Nav  --> */}
     <ul id="nav-full" className="right hide-on-med-and-down white-text" style={styles.headerFont}>
-      <li className="active"><Link className="white-text" to="/">Home</Link></li>
+      <li><Link className="white-text" activeClassName="active" to="/">Home</Link></li>
       <li><Link className="white-text" activeClassName="active" to="/explore/movie">Movies</Link></li>
      <li><Link className="white-text" activeClassName="active" to="/explore/tv">TV Shows</Link></li>
      </ul>
