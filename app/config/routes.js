@@ -7,6 +7,8 @@ var IndexRoute = ReactRouter.IndexRoute;
 var Main = require('../components/Main');
 var Home = require('../components/home/Home');
 var ExploreContainer = require('../containers/ExploreContainer')
+var DetailContainer = require('../containers/DetailContainer')
+
 
 var routes = (
   <Router history={hashHistory}>
@@ -14,6 +16,7 @@ var routes = (
       <IndexRoute component={Home} />
       <Route path='explore/tv' type = 'tv' component={ExploreContainer}/>
       <Route path='explore/movie' type = 'movie' component={ExploreContainer}/>
+      <Route path='detail/' component={DetailContainer}/>
     </Route>
   </Router>
 );
