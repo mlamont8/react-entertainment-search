@@ -9,7 +9,7 @@ render: function(){
 
         {this.props.data.map(data =>
         <div key ={data.id} className='col s6 m2'>
-          <DisplayPosters posterSrc={data.poster_path} type={this.props.type}/>
+          <DisplayPosters data={data} type={this.props.type}/>
         </div>)}
     </div>
 

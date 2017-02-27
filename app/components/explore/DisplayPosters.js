@@ -1,15 +1,16 @@
 var React = require('react');
-var Link = require('react-router').Link
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
 
 
-var displayPosters = function(props){
+var DisplayPosters = function(props){
 
     return (
-
-          <img src = {'https://image.tmdb.org/t/p/w154' + props.posterSrc} />
-
+          <Link data={props.data} to="detail">
+            <img src = {'https://image.tmdb.org/t/p/w154' + props.data.poster_path} />
+         </Link>
     )
 
 }
 
-module.exports = displayPosters;
+module.exports = DisplayPosters;

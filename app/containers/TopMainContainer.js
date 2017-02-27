@@ -44,12 +44,10 @@ var TopMainContainer= React.createClass({
       <div className="row topMainContainer"  style={styles.mostPopularStyle}>
         <LeftPopular
           BigImage={this.state.BigImage}
-
         />
+        
         <RightPopular
           SmallImage={this.state.SmallImage}
-        
-
         />
 
  </div>
