@@ -1,7 +1,9 @@
 var React = require('react')
 
 var DetailContainer = React.createClass({
-
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
   render: function(){
     return (
       <div>
