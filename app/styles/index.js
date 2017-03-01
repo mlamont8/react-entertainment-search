@@ -1,5 +1,9 @@
 var styles = {
 
+  fullSite: {
+    backgroundColor: '#000000'
+  },
+
   divide: {
     height: '25px'
   },
@@ -50,6 +54,7 @@ titleStyle: {
 smallImageStyle: {
   objectFit: 'cover'
 }
+
 
 
 }

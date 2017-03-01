@@ -8,7 +8,7 @@ var Header = React.createClass({
     return(
 
 <header>
-<nav>
+<nav className="transparent">
   <div className="nav-wrapper">
     <span className="brand-logo hide-on-med-and-down">Entertainment Search</span>
 {/* <!--Full sized Nav  --> */}

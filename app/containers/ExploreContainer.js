@@ -85,7 +85,7 @@ PageChange: function (){
                containerClassName={"pagination"}
                subContainerClassName={"pages pagination"}
                activeClassName={"active"} />
-        <DisplayGridContainer data={this.state.apiInfo} type={this.props.params.entType}/>
+        <DisplayGridContainer data={this.state.apiInfo} type={this.props.route.type}/>
 
       </div>
     )
