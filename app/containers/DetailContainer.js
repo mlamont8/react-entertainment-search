@@ -13,20 +13,47 @@ getInitialState() {
   }
 },
 
+// componentDidMount: function (){
+//   var type = this.state.type
+//   var id = this.state.id
+//   DetailHelper.getDetailInfo(type,id)
+//   .then (function(data){
+//     console.log('detaildata',data)
+//     this.setState({
+//       info: data
+//     })
+//   }.bind(this)
+// )
+// },
+
 componentDidMount: function (){
   var type = this.state.type
   var id = this.state.id
   DetailHelper.getDetailInfo(type,id)
   .then (function(data){
-    console.log('detaildata',data)
+    console.log('detaildata',type,data)
+    // Check if type is TV
+    if (type === 'tv'){
+      console.log('tv')
+      this.setState({
+        info: data,
+        title: data.name
+      })
+    }else{
+      // Type is Movie
+    console.log('movie')
     this.setState({
-      info: data
+      info: data,
+      title: data.title
     })
+  }
+
   }.bind(this)
 )
 },
 
   render: function(){
+
     return (
       <div>
       <div className="row">
@@ -38,7 +65,7 @@ componentDidMount: function (){
     	<div className="col s12 m9 white-text">
 
     	<span className="title">
-    		<h3>{this.state.info.original_title}</h3>
+    		<h3>{this.state.title}</h3>
     	</span>
     	<span className="tagline">{this.state.info.tagline}</span>
 

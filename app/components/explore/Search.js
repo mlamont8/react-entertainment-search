@@ -43,33 +43,6 @@ onSubmitTerm: function (e){
        <label htmlFor="searchInput">Search Icon</label>
   </div>
 </form>
-{/* <form>
-  <div className="white-text col s3">
-    <input
-      type="radio"
-      name="searchType"
-      value="movies"
-      id="movieRadio"
-      className="with-gap"
-
-    />
-      <label htmlFor="movieRadio">Movies</label>
-      <input
-        type="radio"
-        name="searchType"
-        value="tv"
-        id="tvRadio"
-        className="with-gap"
-      defaultChecked />
-        <label htmlFor="tvRadio">TV Shows</label>
-
-  </div>
-
-
-</form>
-
-
- */}
 
 
 </div>
