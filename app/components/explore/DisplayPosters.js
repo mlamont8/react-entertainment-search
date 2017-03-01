@@ -22,7 +22,7 @@ var DisplayPosters = React.createClass({
   render: function (){
 
     return (
-    <Link to={'detail/' + this.props.data.id} >
+    <Link to={'detail/'+ this.props.type +'/'+ this.props.data.id } >
       <img src = {'https://image.tmdb.org/t/p/w154' + this.props.data.poster_path} />
     </Link>
     )

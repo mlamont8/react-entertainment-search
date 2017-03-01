@@ -16,7 +16,7 @@ var routes = (
       <IndexRoute component={Home} />
       <Route path='explore/tv' type = 'tv' component={ExploreContainer}/>
       <Route path='explore/movie' type = 'movie' component={ExploreContainer}/>
-      <Route name="detail" path='detail/:id' component={DetailContainer}/>
+      <Route name="detail" path='detail/:type/:id' component={DetailContainer}/>
     </Route>
   </Router>
 );
