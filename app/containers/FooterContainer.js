@@ -11,7 +11,8 @@ var FooterContainer = React.createClass({
   <div className="row">
     <div className="col l4 s12 footerArea right">
 
-      <img className="poweredBy responsive-img" src="/images/poweredbytmdb.png" />
+    {/* <img className="poweredBy responsive-img" src={require('../images/poweredbytmdb.png')} /> */}
+
     </div>
   </div>
 </div>
