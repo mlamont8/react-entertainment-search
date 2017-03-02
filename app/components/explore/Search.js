@@ -1,4 +1,5 @@
 var React = require('react')
+var styles = require('../../styles')
 
 
 var Search = React.createClass({
@@ -30,13 +31,14 @@ onSubmitTerm: function (e){
 
   render: function() {
   return(
-    <div className="search-form" >
+    // <div className="search-form" var style ={styles.searchform}>
 
 
-  <form className="col s3" onSubmit={this.onSubmitTerm}>
+  <form className="col s3" onSubmit={this.onSubmitTerm} style ={styles.searchform}>
     <div className="input-field white-text">
       <i className="material-icons prefix">search</i>
     <input
+      style={styles.searchform}
       onChange={this.onUpdateUser}
       value={this.state.searchTerm}
       id="searchTextInput"
@@ -46,7 +48,7 @@ onSubmitTerm: function (e){
 </form>
 
 
-</div>
+// </div>
 )
 }
   })

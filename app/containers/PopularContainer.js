@@ -9,9 +9,9 @@ var PopularContainer = React.createClass({
 
 render: function () {
   return(
-      <div className="mostPopularFull" style={{backgroundColor: '#000000'}}>
+      <div className="mostPopularFull" style={styles.popMain}>
 
-        <div className="divide col s12 grey darken-4" style={styles.divide} />
+        {/* <div className="divide col s12 grey darken-4" style={styles.divide} /> */}
         <TopContainer />
         <div className="divide col s12 grey darken-4" style={styles.divide} />
 

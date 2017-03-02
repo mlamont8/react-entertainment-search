@@ -4,6 +4,11 @@ var styles = {
     backgroundColor: '#000000'
   },
 
+  popMain: {
+    position: 'relative',
+    marginTop: '-145px'
+  },
+
   divide: {
     height: '25px'
   },
@@ -53,8 +58,10 @@ titleStyle: {
 },
 smallImageStyle: {
   objectFit: 'cover'
+},
+searchform: {
+  width: '250px'
 }
-
 
 
 }

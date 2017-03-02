@@ -14,8 +14,8 @@ var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='explore/tv' type = 'tv' component={ExploreContainer}/>
-      <Route path='explore/movie' type = 'movie' component={ExploreContainer}/>
+      <Route path='explore/tv' type = 'tv' component={ExploreContainer} searchable='true'/>
+      <Route path='explore/movie' type = 'movie' component={ExploreContainer} searchable='true'/>
       <Route name="detail" path='detail/:type/:id' component={DetailContainer}/>
     </Route>
   </Router>
