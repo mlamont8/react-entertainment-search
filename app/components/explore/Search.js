@@ -5,7 +5,8 @@ var Search = React.createClass({
 
 getInitialState() {
   return {
-    searchTerm: ''
+    searchTerm: '',
+    searchItem: ''
   }
 },
 
@@ -19,8 +20,9 @@ onSubmitTerm: function (e){
   e.preventDefault();
   var searchTerm = this.state.searchTerm;
   this.setState({
-    searchTerm: '',
-    searchItem: searchTerm
+    searchItem: searchTerm,
+    searchTerm: ''
+
   });
 
 
@@ -28,7 +30,7 @@ onSubmitTerm: function (e){
 
   render: function() {
   return(
-    <div className="search-form row" >
+    <div className="search-form" >
 
 
   <form className="col s3" onSubmit={this.onSubmitTerm}>
@@ -40,7 +42,6 @@ onSubmitTerm: function (e){
       id="searchTextInput"
       type="text"
        />
-       <label htmlFor="searchInput">Search Icon</label>
   </div>
 </form>
 

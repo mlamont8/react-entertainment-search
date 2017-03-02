@@ -1,6 +1,7 @@
 var React = require('react');
 var styles = require('../styles');
 var ReactRouter = require('react-router');
+var Search = require('./explore/Search')
 var Link = ReactRouter.Link;
 
 var Header = React.createClass({
@@ -10,7 +11,8 @@ var Header = React.createClass({
 <header>
 <nav className="transparent">
   <div className="nav-wrapper">
-    <span className="brand-logo hide-on-med-and-down">Entertainment Search</span>
+    {/* <span className="brand-logo hide-on-med-and-down">Entertainment Search</span> */}
+    <Search />
 {/* <!--Full sized Nav  --> */}
     <ul id="nav-full" className="right hide-on-med-and-down white-text" style={styles.headerFont}>
       <li><Link className="white-text" activeClassName="active" to="/">Home</Link></li>
