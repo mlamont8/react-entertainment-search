@@ -1,4 +1,5 @@
 var React = require('react')
+var RadioButtons = require('./RadioButtons')
 var styles = require('../../styles')
 
 
@@ -38,13 +39,23 @@ onSubmitTerm: function (e){
     <div className="input-field white-text">
       <i className="material-icons prefix">search</i>
     <input
-      style={styles.searchform}
+      style={styles.inputArea}
       onChange={this.onUpdateUser}
       value={this.state.searchTerm}
       id="searchTextInput"
       type="text"
        />
   </div>
+  <div>
+  <span>
+    <input name="searchType" type="radio" id="movRadio" value='movie' />
+    <label for="movRadio">Movies</label>
+  </span>
+  <span>
+    <input name="searchType" type="radio" id="tvRadio" value='tv' />
+    <label for="tvRadio">TV Shows</label>
+  </span>
+</div>
 </form>
 
 

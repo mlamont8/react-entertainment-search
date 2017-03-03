@@ -3,15 +3,37 @@ var styles = {
   fullSite: {
     backgroundColor: '#000000'
   },
+  header: {
+    position: 'fixed',
+    zIndex: 5,
+    width: '100%'
+  },
+
+  navStyles:{
+    backgroundColor: '#000000',
+    opacity: '0.6'
+
+  },
 
   popMain: {
-    position: 'relative',
-    marginTop: '-145px'
+    position: 'relative'
+
   },
 
   divide: {
     height: '25px'
   },
+
+  inputArea: {
+    height: '37px',
+    border: '2px solid rgba(245, 245, 241, 0.4)',
+    borderRadius: '37px',
+    fontSize: '14px',
+    fontWeight: '300',
+    padding: '0 10px',
+    background: 'transparent'
+  },
+
   zeroMargin: {
     margin: 0
   },
@@ -27,7 +49,8 @@ leftPop: {
   position: 'relative'
 },
 rightPopImg: {
-  height: '175px'
+  height: '175px',
+  padding: 0
 },
 headerFont: {
   fontFamily: "'Open Sans Condensed', sans-serif"
@@ -41,7 +64,7 @@ largeImage: {
   height: '100%',
   maxWidth: '100%',
   objectFit: 'cover',
-  opacity: '0.8'
+
 },
 titleStyle: {
   fontSize: '24px',

@@ -11,11 +11,11 @@ var RightPopular= React.createClass({
 
   render: function () {
     return(
-      <div className="rightContainer col s12 m12 l6" style={{padding: 0}}>
+      <div className="rightContainer col s12 m12 l6" style={styles.rightPop}>
 
 
         { this.props.SmallImage.map((SmallImage, index) =>
-    <div key={index} className='imgBlock col s6 m6' style={styles.rightPop}>
+    <div key={index} className='imgBlock col s6 m6' style={styles.rightPopImg}>
           <ImageViewRight
             imageSrc={SmallImage}
 

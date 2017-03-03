@@ -73,8 +73,8 @@ PageChange: function (){
   render: function () {
     return(
       <div style={{backgroundColor: '#000001'}}>
-    
-        <ReactPaginate previousLabel={"previous"}
+
+        {/* <ReactPaginate previousLabel={"previous"}
                nextLabel={"next"}
                breakLabel={<a href="">...</a>}
                breakClassName={"break-me"}
@@ -84,7 +84,7 @@ PageChange: function (){
                onPageChange = {this.PageChange}
                containerClassName={"pagination"}
                subContainerClassName={"pages pagination"}
-               activeClassName={"active"} />
+               activeClassName={"active"} /> */}
         <DisplayGridContainer data={this.state.apiInfo} type={this.props.route.type}/>
 
       </div>
