@@ -13,25 +13,14 @@ getInitialState() {
   }
 },
 
-// componentDidMount: function (){
-//   var type = this.state.type
-//   var id = this.state.id
-//   DetailHelper.getDetailInfo(type,id)
-//   .then (function(data){
-//     console.log('detaildata',data)
-//     this.setState({
-//       info: data
-//     })
-//   }.bind(this)
-// )
-// },
+
 
 componentDidMount: function (){
   var type = this.state.type
   var id = this.state.id
   DetailHelper.getDetailInfo(type,id)
   .then (function(data){
-    console.log('detaildata',type,data)
+
     // Check if type is TV
     if (type === 'tv'){
       console.log('tv')

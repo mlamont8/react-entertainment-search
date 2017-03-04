@@ -13,8 +13,10 @@ var Search = React.createClass({
     e.preventDefault();
     this.context.router.push({
       pathname: '/search',
-      query: this.state.searchTerm,
-      type: this.props.type
+      query: {
+        type: this.props.type,
+        searchTerm: this.state.searchTerm
+    }
     })
   },
 

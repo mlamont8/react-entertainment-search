@@ -13,23 +13,13 @@ getInitialState() {
 
   };
 },
-//
-// GetUrl: function (SearchTerm) {
-//   var entType = this.state.params.entType
-//   if (!SearchTerm){
-//
-//     return ('https://api.themoviedb.org/3/'+ entType + '/popular?api_key=21b0daca9dad79653c91d176b7930bee&sort_by=popularity.desc')
-//
-//   }else{
-//     return ('https://api.themoviedb.org/3/search/' + entType + '?api_key=21b0daca9dad79653c91d176b7930bee&query=' + SearchTerm)
-//   }
-// },
+
 
 componentDidMount: function (){
   var type = this.props.route.type
 ExploreHelper.getExploreInfo(type)
 .then(function (data){
-  console.log('excontain',data)
+
   this.setState({
     apiInfo: data
   })
