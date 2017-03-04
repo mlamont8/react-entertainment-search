@@ -11,7 +11,9 @@ var styles = {
 
   navStyles:{
     backgroundColor: '#000000',
-    opacity: '0.6'
+    borderWidth: 0,
+    WebkitBoxShadow: '0px 0px',
+    boxShadow: '0px 0px'
 
   },
 

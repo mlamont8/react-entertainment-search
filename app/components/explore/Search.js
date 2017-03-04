@@ -5,6 +5,19 @@ var styles = require('../../styles')
 
 var Search = React.createClass({
 
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
+  handleSubmitTerm: function (e){
+    e.preventDefault();
+    this.context.router.push({
+      pathname: '/search',
+      query: this.state.searchTerm,
+      type: this.props.type
+    })
+  },
+
 getInitialState() {
   return {
     searchTerm: '',
@@ -31,11 +44,12 @@ onSubmitTerm: function (e){
 },
 
   render: function() {
+    console.log('search',this.props.params)
   return(
     // <div className="search-form" var style ={styles.searchform}>
 
 
-  <form className="col s3" onSubmit={this.onSubmitTerm} style ={styles.searchform}>
+  <form className="col s3" onSubmit={this.handleSubmitTerm} style ={styles.searchform}>
     <div className="input-field white-text">
       <i className="material-icons prefix">search</i>
     <input
@@ -46,7 +60,7 @@ onSubmitTerm: function (e){
       type="text"
        />
   </div>
-  <div>
+  {/* <div>
   <span>
     <input name="searchType" type="radio" id="movRadio" value='movie' />
     <label for="movRadio">Movies</label>
@@ -55,7 +69,7 @@ onSubmitTerm: function (e){
     <input name="searchType" type="radio" id="tvRadio" value='tv' />
     <label for="tvRadio">TV Shows</label>
   </span>
-</div>
+</div> */}
 </form>
 
 

@@ -5,11 +5,18 @@ var Search = require('./explore/Search')
 var Link = ReactRouter.Link;
 
 var Header = React.createClass({
+
+getInitialState() {
+  return {
+    type:''
+  };
+},
+
   render: function () {
     return(
 
 <header style={styles.header}>
-<nav style={styles.navStyles}>
+<nav className="transparent" style={styles.navStyles}>
   <div className="nav-wrapper">
     <span className="brand-logo hide-on-med-and-down">VID Search</span>
     {/* <span className="center"><Search className="center"/></span> */}
@@ -32,7 +39,7 @@ var Header = React.createClass({
 
   </div>
 </nav>
-<span className="center"><Search className="center"/></span>
+
 </header>
 
     )
