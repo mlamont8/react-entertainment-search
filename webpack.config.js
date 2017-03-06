@@ -15,7 +15,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
+      {test: /\.(jpe?g|png|gif|svg)$/, loader: "file-loader"}
     ]
   },
   plugins: [HtmlwebpackPluginConfig]

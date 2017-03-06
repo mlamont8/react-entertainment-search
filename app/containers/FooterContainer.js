@@ -1,5 +1,6 @@
 var React = require('react')
 var styles = require('../styles')
+var img = require('../images/poweredbytmdb.png')
 
 
 var FooterContainer = React.createClass({
@@ -11,7 +12,7 @@ var FooterContainer = React.createClass({
   <div className="row">
     <div className="col l4 s12 footerArea right">
 
-    {/* <img className="poweredBy responsive-img" src={require('../images/poweredbytmdb.png')} /> */}
+     <img className="poweredBy responsive-img" src={img} />
 
     </div>
   </div>
