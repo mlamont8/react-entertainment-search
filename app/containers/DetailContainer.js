@@ -1,6 +1,8 @@
 var React = require('react')
-var DetailHelper = require('../utils/detailHelper')
-var ExploreBottom = require('../components/exploreBottom')
+var apiHelper = require('../utils/apiHelper')
+var DetailPoster = require('../components/detail/detailPoster')
+var DetailTitle = require('../components/detail/detailTitle')
+var BoxImage = require('../components/detail/boxImage')
 var styles = require('../styles')
 
 var DetailContainer = React.createClass({
@@ -18,20 +20,19 @@ getInitialState() {
 componentDidMount: function (){
   var type = this.state.type
   var id = this.state.id
-  DetailHelper.getDetailInfo(type,id)
+
+  apiHelper.getDetailInfo(type,id)
   .then (function(data){
 
     // Check if type is TV
     if (type === 'tv'){
-      console.log('tv')
-      this.setState({
+        this.setState({
         info: data,
         title: data.name
       })
     }else{
       // Type is Movie
-    console.log('movie')
-    this.setState({
+      this.setState({
       info: data,
       title: data.title
     })
@@ -46,16 +47,15 @@ componentDidMount: function (){
     return (
       <div>
       <div className="row">
-        <div className="divide col s12 grey darken-4" style={styles.divide}></div>
+{/*
     		<div className="posterContainer col s12 m3">
     	<img src={'https://image.tmdb.org/t/p/w185/' + this.state.info.poster_path} className="responsive-image" />
-    </div>
+    </div> */}
+    <BoxImage path= {this.state.info.poster_path} />
 
     	<div className="col s12 m9 white-text">
 
-    	<span className="title">
-    		<h3>{this.state.title}</h3>
-    	</span>
+      <DetailTitle title={this.state.title} />
     	<span className="tagline">{this.state.info.tagline}</span>
 
     	<p>Release Date: {this.state.info.release_date}</p>
@@ -69,7 +69,7 @@ componentDidMount: function (){
     </div>
     </div>
 
-    <ExploreBottom
+    <DetailPoster
       image = {this.state.info.backdrop_path} />
 </div>
 

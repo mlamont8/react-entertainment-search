@@ -1,6 +1,6 @@
 var React = require('react')
 var Search = require('../components/explore/Search')
-var ExploreHelper = require('../utils/exploreHelper')
+var apiHelper = require('../utils/apiHelper')
 var DisplayGridContainer = require('./DisplayGridContainer')
 var ReactPaginate = require('react-paginate')
 
@@ -17,7 +17,7 @@ getInitialState() {
 
 componentDidMount: function (){
   var type = this.props.route.type
-ExploreHelper.getExploreInfo(type)
+apiHelper.getExploreInfo(type)
 .then(function (data){
 
   this.setState({
@@ -48,7 +48,7 @@ ExploreHelper.getExploreInfo(type)
 PageChange: function (){
     var type = this.props.params.type
     var page = this.props.page
-    ExploreHelper.getExploreInfo(type,page)
+    apiHelper.getExploreInfo(type,page)
     .then(function (data){
       console.log('pagechange',data, page)
       this.setState({

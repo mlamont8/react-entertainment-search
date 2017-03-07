@@ -22,7 +22,7 @@ var TopMainContainer= React.createClass({
 
   PopularFetch() {
     // This API prefers calls using jsonp
-    return fetchJsonp('http://api.themoviedb.org/3/movie/popular/?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=1')
+    return fetchJsonp('http://api.themoviedb.org/3/movie/now_playing/?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=1')
     .then (function(response){
         return response.json()
     }).then(function(json) {
@@ -45,7 +45,7 @@ var TopMainContainer= React.createClass({
         <LeftPopular
           BigImage={this.state.BigImage}
         />
-        
+
         <RightPopular
           SmallImage={this.state.SmallImage}
         />

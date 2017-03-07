@@ -1,6 +1,6 @@
 var React = require('react')
 
-var exploreBottom = function (props){
+var detailPoster = function (props){
 
 return (
   <div className="row">
@@ -16,4 +16,4 @@ return (
 
 }
 
-module.exports = exploreBottom
+module.exports = detailPoster

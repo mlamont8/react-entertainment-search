@@ -1,6 +1,6 @@
 var React = require('react')
 var DisplayGridContainer = require('./DisplayGridContainer')
-var searchHelper = require('../utils/searchHelper')
+var apiHelper = require('../utils/apiHelper')
 
 var SearchContainer =  React.createClass({
 
@@ -13,9 +13,9 @@ var SearchContainer =  React.createClass({
 componentDidMount: function () {
   var searchType = this.props.location.query.type
   var searchTerm = this.props.location.query.searchTerm
-  searchHelper.getSearchInfo(searchType, searchTerm)
+  apiHelper.getSearchInfo(searchType, searchTerm)
     .then (function(data){
-    
+
       this.setState ({
         apiInfo: data
       })
