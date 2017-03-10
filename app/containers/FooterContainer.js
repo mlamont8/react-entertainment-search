@@ -12,17 +12,21 @@ var FooterContainer = React.createClass({
   <div className="row">
     <div className="col l4 s12 footerArea right">
 
-     <img className="poweredBy responsive-img" src={img} />
+     <img className="poweredBy responsive-img black" src={img} />
 
     </div>
+
+</div>
+{/* <div className="footer-copyright"> */}
+  <div className="row">
+    <div className="col l4 s12 left">
+    <span className="grey-text">This product uses the TMDb API but is not endorsed or certified by TMDb.</span>
+  <p className="grey-text text-lighten-4">© 2017 Copyright M Lamont Taylor</p>
+
+
   </div>
 </div>
-<div className="footer-copyright">
-  <div className="container">
-  © 2016 Copyright M Lamont Taylor
-  <a className="grey-text text-lighten-4 right" href="#!"></a>
-  </div>
-</div>
+    </div>
 </footer>
     )
   }
