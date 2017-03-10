@@ -34,7 +34,7 @@ componentWillReceiveProps: function (nextProps){
   // Check if type actually changed
     {
   var type = nextProps.route.type
-ExploreHelper.getExploreInfo(type)
+apiHelper.getExploreInfo(type)
 .then(function (data){
   console.log('update',type)
   this.setState({

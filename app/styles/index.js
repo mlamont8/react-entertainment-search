@@ -22,8 +22,21 @@ var styles = {
 
   },
 
-  divide: {
-    height: '25px'
+  titleBlock: {
+    height: '150px',
+    width: '300px',
+    padding: '40px',
+    borderStyle: 'solid',
+    borderWidth: '10px',
+    borderColor: '#FFFFFF',
+    position: 'relative',
+    zIndex: '1'
+  },
+
+  mainTitle: {
+    fontSize: '23px',
+    fontWeight: '900',
+    width: '80px'
   },
 
   inputArea: {
@@ -55,8 +68,11 @@ rightPopImg: {
   padding: 0
 },
 headerFont: {
-  fontFamily: "'Open Sans Condensed', sans-serif"
+
+  fontSize: '18px'
+
 },
+
 rightPop: {
   padding: 0,
   height: '175px',

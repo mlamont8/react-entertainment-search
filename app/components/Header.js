@@ -18,13 +18,12 @@ getInitialState() {
 <header style={styles.header}>
 <nav className="transparent" style={styles.navStyles}>
   <div className="nav-wrapper">
-    <span className="brand-logo hide-on-med-and-down">VID Search</span>
-    {/* <span className="center"><Search className="center"/></span> */}
+  
 {/* <!--Full sized Nav  --> */}
-    <ul id="nav-full" className="right hide-on-med-and-down white-text" style={styles.headerFont}>
-      <li><Link className="white-text" activeClassName="active" to="/">Home</Link></li>
-      <li><Link className="white-text" activeClassName="active" to="/explore/movie">Movies</Link></li>
-      <li><Link className="white-text" activeClassName="active" to="/explore/tv">TV Shows</Link></li>
+    <ul id="nav-full" className="right hide-on-med-and-down white-text">
+      <li><Link className="white-text" activeClassName="active" to="/" style={styles.headerFont}>Home</Link></li>
+      <li><Link className="white-text" activeClassName="active" to="/explore/movie"  style={styles.headerFont}>Movies</Link></li>
+      <li><Link className="white-text" activeClassName="active" to="/explore/tv"  style={styles.headerFont}>TV Shows</Link></li>
      </ul>
      {/* <!-- Mobile Button --> */}
         <a href="#" className="button-collapse" data-activates="mobile-nav" data-sidenav="left" data-closeonclick="true" data-menuwidth="100">
