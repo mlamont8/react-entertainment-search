@@ -10,18 +10,15 @@ var FooterContainer = React.createClass({
       <footer className="page-footer" style={styles.fullSite}>
 <div className="container">
   <div className="row">
-    <div className="col l4 s12 footerArea right">
+    <div className="col m4 s12 footerArea right">
 
-     <img className="poweredBy responsive-img black" src={img} />
+     <img className="poweredBy responsive-img black" style={{paddingTop: '10px'}} src={img} />
 
     </div>
 
-</div>
-{/* <div className="footer-copyright"> */}
-  <div className="row">
-    <div className="col l4 s12 left">
+    <div className="col m6 s12 left">
     <span className="grey-text">This product uses the TMDb API but is not endorsed or certified by TMDb.</span>
-  <p className="grey-text text-lighten-4">© 2017 Copyright M Lamont Taylor</p>
+  <p className="grey-text text-lighten-4" style={{marginTop: '40px'}} > © 2017 Copyright M Lamont Taylor</p>
 
 
   </div>
