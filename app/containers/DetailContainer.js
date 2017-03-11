@@ -47,10 +47,7 @@ componentDidMount: function (){
     return (
       <div>
       <div className="row">
-{/*
-    		<div className="posterContainer col s12 m3">
-    	<img src={'https://image.tmdb.org/t/p/w185/' + this.state.info.poster_path} className="responsive-image" />
-    </div> */}
+
     <BoxImage path= {this.state.info.poster_path} />
 
     	<div className="col s12 m9 white-text">
@@ -59,11 +56,8 @@ componentDidMount: function (){
     	<span className="tagline">{this.state.info.tagline}</span>
 
     	<p>Release Date: {this.state.info.release_date}</p>
-
     	<span className="description">{this.state.info.overview}</span>
-
     	<p>Rating: {this.state.info.vote_average} of 10.0</p>
-
     	<p><span className="homepage"><a href={this.state.info.homepage}>HOMEPAGE</a></span></p>
 
     </div>

@@ -4,12 +4,12 @@ var fetchJsonp = require('fetch-jsonp')
 
 var helpers = {
   // Retrieve info for Explore Container
-  getExploreInfo: function (type){
+  getExploreInfo: function (type, page){
 
-    return fetchJsonp('https://api.themoviedb.org/3/'+type+'/popular?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=1&callback=test')
-  .then (function(response){
+    return fetchJsonp('https://api.themoviedb.org/3/'+type+'/popular?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=' + page + '&callback=test')
+      .then (function(response){
 
-      return response.json()
+        return response.json()
   }).then(function(json) {
 
     return json.results
@@ -44,7 +44,7 @@ getSearchInfo: function(type, search){
 
     return response.json()
 }).then(function(json) {
-    console.log('searchreturn',json.results)
+  
   return json.results
   })
 .catch(function(ex) {

@@ -5,6 +5,7 @@ var Link = ReactRouter.Link;
 var DisplayGridContainer = React.createClass({
 
 
+
 render: function(){
   return(
     <div className="row">
@@ -15,13 +16,16 @@ render: function(){
               <div key ={data.id} className='col s6 m2'>
 
                 <Link to={'detail/'+ this.props.type +'/'+ data.id } >
-                  <img src = {'https://image.tmdb.org/t/p/w154' + data.poster_path} />
+                  <img src = {'https://image.tmdb.org/t/p/w154' + data.poster_path}
+                  onError = {this.imageError}
+
+                 />
                 </Link>
 
               </div>
 
-    )
-  }
+            )
+          }
       )}
     </div>
 

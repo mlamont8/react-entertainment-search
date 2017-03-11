@@ -17,7 +17,8 @@ getInitialState() {
 
 componentDidMount: function (){
   var type = this.props.route.type
-apiHelper.getExploreInfo(type)
+  var page = 1
+apiHelper.getExploreInfo(type, page)
 .then(function (data){
 
   this.setState({
@@ -25,8 +26,6 @@ apiHelper.getExploreInfo(type)
   })
 }.bind(this)
 )
-
-
 },
 
 componentWillReceiveProps: function (nextProps){
@@ -45,13 +44,13 @@ apiHelper.getExploreInfo(type)
 }
 },
 
-PageChange: function (){
-    var type = this.props.params.type
-    var page = this.props.page
+// Update when pagination is used
+PageChange: function (number){
+    var type = this.props.route.type
+    var page = number.selected + 1
     apiHelper.getExploreInfo(type,page)
     .then(function (data){
-      console.log('pagechange',data, page)
-      this.setState({
+        this.setState({
         apiInfo: data
       })
     }.bind(this)
@@ -66,7 +65,7 @@ PageChange: function (){
         <Search
         type={this.props.route.type}
       />
-        {/* <ReactPaginate previousLabel={"previous"}
+        <ReactPaginate previousLabel={"previous"}
                nextLabel={"next"}
                breakLabel={<a href="">...</a>}
                breakClassName={"break-me"}
@@ -76,7 +75,7 @@ PageChange: function (){
                onPageChange = {this.PageChange}
                containerClassName={"pagination"}
                subContainerClassName={"pages pagination"}
-               activeClassName={"active"} /> */}
+               activeClassName={"active"} />
         <DisplayGridContainer data={this.state.apiInfo} type={this.props.route.type}/>
 
       </div>

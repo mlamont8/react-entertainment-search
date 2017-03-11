@@ -46,10 +46,8 @@ onSubmitTerm: function (e){
 },
 
   render: function() {
-    console.log('search',this.props.params)
-  return(
-    // <div className="search-form" var style ={styles.searchform}>
 
+  return(
 
   <form className="col s3" onSubmit={this.handleSubmitTerm} style ={styles.searchform}>
     <div className="input-field white-text">
@@ -62,20 +60,9 @@ onSubmitTerm: function (e){
       type="text"
        />
   </div>
-  {/* <div>
-  <span>
-    <input name="searchType" type="radio" id="movRadio" value='movie' />
-    <label for="movRadio">Movies</label>
-  </span>
-  <span>
-    <input name="searchType" type="radio" id="tvRadio" value='tv' />
-    <label for="tvRadio">TV Shows</label>
-  </span>
-</div> */}
+
 </form>
 
-
-// </div>
 )
 }
   })
