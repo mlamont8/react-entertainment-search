@@ -3,6 +3,7 @@ var apiHelper = require('../utils/apiHelper')
 var DetailPoster = require('../components/detail/detailPoster')
 var DetailTitle = require('../components/detail/detailTitle')
 var BoxImage = require('../components/detail/boxImage')
+var DetailInfo = require('../components/detail/detailInfo')
 var styles = require('../styles')
 
 var DetailContainer = React.createClass({
@@ -45,26 +46,29 @@ componentDidMount: function (){
   render: function(){
 
     return (
-      <div>
+      <div className="container-fluid">
       <div className="row">
+
+        <DetailPoster
+        image = {this.state.info.backdrop_path} />
 
     <BoxImage path= {this.state.info.poster_path} />
 
     	<div className="col s12 m9 white-text">
 
-      <DetailTitle title={this.state.title} />
-    	<span className="tagline">{this.state.info.tagline}</span>
 
-    	<p>Release Date: {this.state.info.release_date}</p>
-    	<span className="description">{this.state.info.overview}</span>
-    	<p>Rating: {this.state.info.vote_average} of 10.0</p>
-    	<p><span className="homepage"><a href={this.state.info.homepage}>HOMEPAGE</a></span></p>
+      <DetailInfo
+        tag= {this.state.info.tagline}
+        date={this.state.info.release_date}
+        overview={this.state.info.overview}
+        rating={this.state.info.vote_average}
+        homepage={this.state.info.homepage}
+      />
 
     </div>
     </div>
 
-    <DetailPoster
-      image = {this.state.info.backdrop_path} />
+
 </div>
 
     )

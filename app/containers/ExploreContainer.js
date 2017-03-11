@@ -62,9 +62,9 @@ PageChange: function (number){
   render: function () {
     return(
       <div style={{backgroundColor: '#000000', paddingTop: '80px'}}>
-        <Search
-        type={this.props.route.type}
-      />
+        <div className="row">
+          <Search type={this.props.route.type} />
+        </div>
         <ReactPaginate previousLabel={"previous"}
                nextLabel={"next"}
                breakLabel={<a href="">...</a>}

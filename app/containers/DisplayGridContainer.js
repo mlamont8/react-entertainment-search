@@ -17,7 +17,7 @@ render: function(){
 
                 <Link to={'detail/'+ this.props.type +'/'+ data.id } >
                   <img src = {'https://image.tmdb.org/t/p/w154' + data.poster_path}
-                  onError = {this.imageError}
+                
 
                  />
                 </Link>

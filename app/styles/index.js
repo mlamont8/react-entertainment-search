@@ -3,10 +3,16 @@ var styles = {
   fullSite: {
     backgroundColor: '#000000'
   },
+
   header: {
     position: 'fixed',
     zIndex: 5,
     width: '100%'
+  },
+
+  footer: {
+    backgroundColor: '#000000',
+    position: 'relative'
   },
 
   navStyles:{
@@ -52,21 +58,25 @@ var styles = {
   zeroMargin: {
     margin: 0
   },
+
   mostPopularStyle: {
 	height: '350px',
   width: '100%',
   margin: 0
 
 },
+
 leftPop: {
   height: '350px',
   padding: 0,
   position: 'relative'
 },
+
 rightPopImg: {
   height: '175px',
   padding: 0
 },
+
 headerFont: {
 
   fontSize: '18px'
@@ -78,6 +88,7 @@ rightPop: {
   height: '175px',
   position: 'relative'
 },
+
 largeImage: {
   height: '100%',
   maxWidth: '100%',
@@ -97,11 +108,30 @@ titleStyle: {
   borderRadius: '10px',
   padding: '8px'
 },
+
 smallImageStyle: {
   objectFit: 'cover'
 },
+
 searchform: {
   width: '250px'
+},
+
+boxCover: {
+  position: 'relative',
+  opacity: '.9',
+
+
+},
+
+detailInfo: {
+  position: 'relative',
+  backgroundColor: "#000000",
+  borderRadius: '2px',
+  opacity: '.8',
+  padding: '10px',
+  marginTop: '300px'
+
 }
 
 
