@@ -20,7 +20,7 @@ var Search = React.createClass({
     })
   },
 
-getInitialState() {
+getInitialState: function () {
   return {
     searchTerm: '',
     searchItem: ''

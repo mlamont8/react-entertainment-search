@@ -8,7 +8,7 @@ var styles = require('../styles')
 
 var DetailContainer = React.createClass({
 
-getInitialState() {
+getInitialState: function() {
   return {
     type: this.props.params.type,
     id: this.props.params.id,
