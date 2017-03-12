@@ -35,7 +35,7 @@ componentWillReceiveProps: function (nextProps){
   var type = nextProps.route.type
 apiHelper.getExploreInfo(type)
 .then(function (data){
-  console.log('update',type)
+
   this.setState({
     apiInfo: data
   })
