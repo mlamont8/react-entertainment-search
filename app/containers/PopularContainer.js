@@ -10,7 +10,7 @@ var PopularContainer = React.createClass({
 
 render: function () {
   return(
-      <div className="mostPopularFull" style={styles.popMain}>
+      <div className="mostPopularFull container" style={styles.popMain}>
           <TopContainer />
             <MainDivider />
           <BottomContainer />

@@ -2,14 +2,12 @@ var styles = {
 
   fullSite: {
     backgroundColor: '#000000',
-    minHeight: '100vh',
+    height: '100vh',
     display: 'flex',
+    width: '100%',
     flexDirection: 'column'
   },
 
-  main: {
-    flex: '1 0 auto'
-  },
 
   header: {
     position: 'fixed',
@@ -39,8 +37,12 @@ var styles = {
     top: '36px'
   },
   bmBurgerBars: {
-    background: '#373a47'
+    background: '#FFFFFF',
+    borderStyle: 'solid',
+    borderColor: '#000000',
+    borderWidth: '1px'
   },
+
   bmCrossButton: {
     height: '24px',
     width: '24px'
@@ -51,21 +53,23 @@ var styles = {
   bmMenu: {
     background: '#373a47',
     padding: '2.5em 1.5em 0',
-    fontSize: '1.15em'
+    fontSize: '1.15em',
+    height: '300px'
   },
   bmMorphShape: {
     fill: '#373a47'
   },
   bmItemList: {
-    color: '#b8b7ad',
-    padding: '0.8em'
+    backgroundColor: '#000000',
+    padding: '0.1em'
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'
   },
 
   popMain: {
-    position: 'relative'
+    position: 'relative',
+    width: '100%'
 
   },
 

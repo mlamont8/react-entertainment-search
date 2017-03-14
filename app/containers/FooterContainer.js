@@ -8,7 +8,7 @@ var FooterContainer = React.createClass({
   render: function(){
     return(
       <footer className="page-footer" style={styles.footer}>
-<div className="container">
+{/* <div className="container"> */}
   <div className="row">
     <div className="col m4 s12 footerArea right">
 
@@ -23,7 +23,7 @@ var FooterContainer = React.createClass({
 
   </div>
 </div>
-    </div>
+    {/* </div> */}
 </footer>
     )
   }

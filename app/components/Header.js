@@ -18,7 +18,7 @@ getInitialState() {
   render: function () {
     return(
 
-<header style={styles.header}>
+<header className="container row" style={styles.header}>
 <nav className="transparent" style={styles.navStyles}>
   <div className="nav-wrapper">
 
@@ -36,8 +36,8 @@ getInitialState() {
       <li><Link  className="black-text" activeClassName="active" to="/explore/movie">Movies</Link></li>
      <li><Link className="black-text" activeClassName="active" to="/explore/tv">TV Shows</Link></li>
      </ul> */}
-
-     <Menu width={ 300 } styles={ styles } >
+<div className="hide-on-large-only">
+     <Menu width={ 300 } styles={ styles }>
        <RadiumLink className="menu-item" to="/">Home</RadiumLink>
        <RadiumLink className="menu-item" to="/explore/movie">Movies</RadiumLink>
        <RadiumLink className="menu-item" to="/explore/tv">TV Shows</RadiumLink>
@@ -46,7 +46,7 @@ getInitialState() {
           <i className="material-icons">menu</i>
         </RadiumLink> */}
      </Menu>
-
+</div>
   </div>
 </nav>
 

@@ -15,7 +15,7 @@ render: function(){
         {this.props.data.map(data => {
                 return (
 
-              <div key ={data.id} className='col m6 l2' style={{padding: '5px'}}>
+              <div key ={data.id} className='col m6 l2 center-align' style={{padding: '5px'}}>
 
                 <Link to={'detail/'+ this.props.type +'/'+ data.id } >
                   <img src = {'https://image.tmdb.org/t/p/w154' + data.poster_path}

@@ -7,7 +7,7 @@ var Footer = require('../containers/FooterContainer')
 class Main extends React.Component {
   render() {
     return(
-      <div className="container-fluid" style={styles.fullSite}>
+      <div className="fullContain" style={styles.fullSite}>
         <Header />
       {this.props.children}
       <Footer />
