@@ -1,3 +1,5 @@
+// Displays Grid of images during TV or Movie Browse
+
 var React = require('react')
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
@@ -13,11 +15,11 @@ render: function(){
         {this.props.data.map(data => {
                 return (
 
-              <div key ={data.id} className='col s6 m2'>
+              <div key ={data.id} className='col m6 l2' style={{padding: '5px'}}>
 
                 <Link to={'detail/'+ this.props.type +'/'+ data.id } >
                   <img src = {'https://image.tmdb.org/t/p/w154' + data.poster_path}
-                
+
 
                  />
                 </Link>

@@ -1,7 +1,14 @@
 var styles = {
 
   fullSite: {
-    backgroundColor: '#000000'
+    backgroundColor: '#000000',
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+
+  main: {
+    flex: '1 0 auto'
   },
 
   header: {
@@ -12,7 +19,8 @@ var styles = {
 
   footer: {
     backgroundColor: '#000000',
-    position: 'relative'
+    position: 'relative',
+    bottom: 0
   },
 
   navStyles:{
@@ -93,7 +101,7 @@ var styles = {
   },
 
   mostPopularStyle: {
-	height: '350px',
+	minHeight: '350px',
   width: '100%',
   margin: 0
 

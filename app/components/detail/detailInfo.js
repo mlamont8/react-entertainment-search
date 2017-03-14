@@ -5,7 +5,7 @@ var styles = require('../../styles')
 var detailInfo = function (props){
 
   return(
-    <div className='detailInfo' style={styles.detailInfo}>
+    <div className='detailInfo col s12 m9 white-text' style={styles.detailInfo}>
     <p>Release Date: {props.date}</p>
     <span className="description">{props.overview}</span>
     <p>Rating: {props.rating} of 10.0</p>

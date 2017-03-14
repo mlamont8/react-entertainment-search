@@ -37,7 +37,7 @@ getInitialState() {
      <li><Link className="black-text" activeClassName="active" to="/explore/tv">TV Shows</Link></li>
      </ul> */}
 
-     <Menu width={ 120 } styles={ styles } >
+     <Menu width={ 300 } styles={ styles } >
        <RadiumLink className="menu-item" to="/">Home</RadiumLink>
        <RadiumLink className="menu-item" to="/explore/movie">Movies</RadiumLink>
        <RadiumLink className="menu-item" to="/explore/tv">TV Shows</RadiumLink>

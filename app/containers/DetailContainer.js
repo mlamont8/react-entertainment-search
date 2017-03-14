@@ -46,7 +46,7 @@ componentDidMount: function (){
   render: function(){
 
     return (
-      <div className="container-fluid">
+      <main className="container-fluid">
       <div className="row">
 
         <DetailPoster
@@ -54,7 +54,7 @@ componentDidMount: function (){
 
     <BoxImage path= {this.state.info.poster_path} />
 
-    	<div className="col s12 m9 white-text">
+    	{/* <div className="col s12 m9 white-text"> */}
 
 
       <DetailInfo
@@ -65,11 +65,19 @@ componentDidMount: function (){
         homepage={this.state.info.homepage}
       />
 
-    </div>
+    {/* </div> */}
+
+    {/* <DetailPoster
+    image = {this.state.info.backdrop_path} >
+
+    <BoxImage path= {this.state.info.poster_path} />
+
+  </DetailPoster> */}
+
     </div>
 
 
-</div>
+</main>
 
     )
   }
