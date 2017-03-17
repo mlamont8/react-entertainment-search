@@ -4,6 +4,7 @@ var LeftPopular = require('../components/home/popcontainer/LeftPopular');
 var RightPopular = require('../components//home/popcontainer/RightPopular');
 var apiHelper = require('../utils/apiHelper')
 var fetchJsonp = require('fetch-jsonp');
+var Row = require('react-bootstrap').Row
 var styles = require('../styles');
 
 var TopMainContainer= React.createClass({
@@ -33,7 +34,7 @@ var TopMainContainer= React.createClass({
 
   render: function () {
     return(
-      <div className="row topMainContainer"  style={styles.mostPopularStyle}>
+      <Row className="topMainContainer"  style={styles.mostPopularStyle}>
         <LeftPopular
           BigImage={this.state.BigImage}
         />
@@ -42,7 +43,7 @@ var TopMainContainer= React.createClass({
           SmallImage={this.state.SmallImage}
         />
 
- </div>
+ </Row>
 
     )
   }

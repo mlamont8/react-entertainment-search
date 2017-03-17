@@ -4,6 +4,7 @@ var PropTypes = React.PropTypes;
 var ImageView = require('./ImageView')
 var ImageTitle = require('./ImageTitle')
 var styles = require('../../../styles')
+var Col = require('react-bootstrap').Col
 
 
 var RightPopular= React.createClass({
@@ -11,17 +12,17 @@ var RightPopular= React.createClass({
 
   render: function () {
     return(
-      <div className="rightContainer col s12 m6 l6" style={styles.rightPop}>
+      <Col className="rightContainer" sm={12} md={6} style={styles.rightPop}>
 
 
         { this.props.SmallImage.map((SmallImage, index) =>
-    <div key={index} className='imgBlock col s6 m6' style={styles.rightPopImg}>
+    <Col key={index} className='imgBlock' sm={6} md={6} style={styles.rightPopImg}>
           <ImageView
             imageSrc={SmallImage}
 
            />
 
-      </div>
+      </Col>
 
         )}
 
@@ -29,7 +30,7 @@ var RightPopular= React.createClass({
 
 
 
-      </div>
+      </Col>
     )
   }
 })

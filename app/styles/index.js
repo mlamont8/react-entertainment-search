@@ -22,7 +22,7 @@ var styles = {
   },
 
   navStyles:{
-    backgroundColor: '#000000',
+    backgroundColor: 'transparent',
     borderWidth: 0,
     WebkitBoxShadow: '0px 0px',
     boxShadow: '0px 0px'
@@ -68,20 +68,21 @@ var styles = {
   },
 
   popMain: {
-    position: 'relative',
-    width: '100%'
+    position: 'relative'
+
 
   },
 
   titleBlock: {
     height: '150px',
-    width: '300px',
+    backgroundColor: '#b71c1c',
+    color: '#ffffff',
     padding: '40px',
     borderStyle: 'solid',
-    borderWidth: '10px',
+    borderWidth: '3px',
     borderColor: '#FFFFFF',
-    position: 'relative',
-    zIndex: '1'
+
+
   },
 
   mainTitle: {

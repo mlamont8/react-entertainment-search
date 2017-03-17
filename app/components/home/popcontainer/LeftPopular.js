@@ -3,13 +3,14 @@ var React = require('react')
 var styles = require('../../../styles')
 var ImageView = require('./ImageView')
 var ImageTitle = require('./ImageTitle')
+var Col = require('react-bootstrap').Col
 
 
 var LeftPopular= React.createClass({
 
   render: function () {
     return(
-      <div className="leftContainer blue imgBlock col s12 m6 l6" style={styles.leftPop}>
+    <Col className="leftContainer blue imgBlock" sm={12} md={6} style={styles.leftPop}>
 
           <ImageView
             imageSrc = {this.props.BigImage}
@@ -18,7 +19,7 @@ var LeftPopular= React.createClass({
             </ImageView>
 
 
-        </div>
+        </Col>
 
     )
   }
