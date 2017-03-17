@@ -25,7 +25,8 @@ var styles = {
     backgroundColor: 'transparent',
     borderWidth: 0,
     WebkitBoxShadow: '0px 0px',
-    boxShadow: '0px 0px'
+    boxShadow: '0px 0px',
+    zIndex: 5,
 
   },
 
