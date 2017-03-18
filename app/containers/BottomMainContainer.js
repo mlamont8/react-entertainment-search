@@ -1,11 +1,10 @@
-// Top Movie Container of Home Page
+// Bottom Movie Container of Home Page
 var React = require('react');
 var LeftPopular = require('../components/home/popcontainer/LeftPopular');
 var RightPopular = require('../components//home/popcontainer/RightPopular');
 var apiHelper = require('../utils/apiHelper')
 var Row = require('react-bootstrap').Row
-var fetchJsonp = require('fetch-jsonp');
-var styles = require('../styles');
+var css = require('../styles/index.scss');
 
 var BottomMainContainer= React.createClass({
 
@@ -32,19 +31,15 @@ var BottomMainContainer= React.createClass({
 
   render: function () {
     return(
-      <Row className="row topMainContainer"  style={styles.mostPopularStyle}>
+      <Row className="row topMainContainer halfPopStyle">
 
-        <RightPopular
-          SmallImage={this.state.SmallImage}
+          <RightPopular
+          SmallImage={this.state.SmallImage}/>
 
-        />
+          <LeftPopular
+          BigImage={this.state.BigImage}/>
 
-        <LeftPopular
-          BigImage={this.state.BigImage}
-
-        />
-
- </Row>
+        </Row>
 )
 
 }

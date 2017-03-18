@@ -1,11 +1,7 @@
 var React = require('react');
-var styles = require('../styles');
+var css = require('../styles/index.scss');
 var ReactRouter = require('react-router');
 var Search = require('./explore/Search')
-var Link = ReactRouter.Link;
-var Radium = require('radium')
-var RadiumLink = Radium(Link)
-var Menu = require('react-burger-menu').stack
 var Nav = require('react-bootstrap').Nav
 var NavItem = require('react-bootstrap').NavItem
 var Navbar = require('react-bootstrap').Navbar
@@ -24,19 +20,16 @@ getInitialState() {
     return(
 
 
-      <Navbar style={styles.navStyles}>
+      <Navbar className="navStyles fixedTop">
         <Navbar.Header>
-          {/* <Navbar.Brand>
-            <a href="#">React-Bootstrap</a>
-          </Navbar.Brand> */}
-            <Navbar.Toggle />
+                <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav bsStyle="pills" pullRight>
 
-            <LinkContainer className="home-link" to="/" style={styles.headerFont}><NavItem eventKey={1}>Home</NavItem></LinkContainer>
-            <LinkContainer className="movie-link" to="/explore/movie"  style={styles.headerFont}><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
-            <LinkContainer className="tv-link" to="/explore/tv"  style={styles.headerFont}><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
+            <LinkContainer className="home-link headerFont" to="/"><NavItem eventKey={1}>Home</NavItem></LinkContainer>
+            <LinkContainer className="movie-link headerFont" to="/explore/movie"><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
+            <LinkContainer className="tv-link headerFont" to="/explore/tv"><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
 
           </Nav>
           </Navbar.Collapse>

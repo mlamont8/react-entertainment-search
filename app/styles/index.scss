@@ -12,6 +12,40 @@ body{
   border-style: solid;
   border-width: 3px;
   border-color: #FFFFFF;
+}
 
+.mainTitle {
+  font-size: 23px;
+  font-weight: 900;
+  width: 80px;
+}
 
+.navStyles {
+  background: transparent;
+  border: none;
+  z-index: 5;
+  margin-bottom: 0;
+  position: fixed;
+}
+
+.headerFont {
+  background-color: $redColor;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.halfPopStyle{
+  min-height: 350px;
+  margin: 0;
+}
+
+.quarterPop {
+  padding: 0;
+  height: 175px;
+
+}
+
+.smallPopImg {
+  height: 175px;
+  padding: 0;
 }
