@@ -24,19 +24,19 @@ getInitialState() {
     return(
 
 
-      <Navbar  style={styles.navStyles}>
+      <Navbar style={styles.navStyles}>
         <Navbar.Header>
-          <Navbar.Brand>
+          {/* <Navbar.Brand>
             <a href="#">React-Bootstrap</a>
-          </Navbar.Brand>
+          </Navbar.Brand> */}
             <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav bsStyle="pills" pullRight style={styles.navStyles}>
+          <Nav bsStyle="pills" pullRight>
 
-            <LinkContainer className="white-text" to="/" style={styles.headerFont}><NavItem eventKey={1}>Home</NavItem></LinkContainer>
-            <LinkContainer className="white-text" to="/explore/movie"  style={styles.headerFont}><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
-            <LinkContainer className="white-text" to="/explore/tv"  style={styles.headerFont}><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
+            <LinkContainer className="home-link" to="/" style={styles.headerFont}><NavItem eventKey={1}>Home</NavItem></LinkContainer>
+            <LinkContainer className="movie-link" to="/explore/movie"  style={styles.headerFont}><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
+            <LinkContainer className="tv-link" to="/explore/tv"  style={styles.headerFont}><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
 
           </Nav>
           </Navbar.Collapse>

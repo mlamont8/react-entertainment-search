@@ -22,11 +22,12 @@ var styles = {
   },
 
   navStyles:{
-    backgroundColor: 'transparent',
+    background: 'transparent',
     borderWidth: 0,
     WebkitBoxShadow: '0px 0px',
     boxShadow: '0px 0px',
     zIndex: 5,
+    marginBottom: 0
 
   },
 
@@ -69,7 +70,8 @@ var styles = {
   },
 
   popMain: {
-    position: 'relative'
+    position: 'relative',
+    marginTop: '-50px'
 
 
   },
@@ -125,8 +127,10 @@ rightPopImg: {
 },
 
 headerFont: {
+  backgroundColor: '#b71c1c',
+  height: '40px',
+  marginTop: '10px'
 
-  fontSize: '18px'
 
 },
 
