@@ -7,11 +7,11 @@ var Grid = require('react-bootstrap').Grid;
 class Main extends React.Component {
   render() {
     return(
-      <Grid fluid className="fullContain fullSite">
+      <div className="fullContain fullSite">
         <Header />
       {this.props.children}
       <Footer />
-    </Grid>
+    </div>
     )
   }
 }

@@ -3,13 +3,16 @@ var Search = require('../components/explore/Search')
 var apiHelper = require('../utils/apiHelper')
 var DisplayGridContainer = require('./DisplayGridContainer')
 var ReactPaginate = require('react-paginate')
+var Pagination = require('react-bootstrap').Pagination
 
 var ExploreContainer = React.createClass({
 
 getInitialState() {
   return {
     SearchTerm: '',
-    apiInfo: []
+    apiInfo: [],
+    activePage: 1,
+    totalPages: 10
 
   };
 },
@@ -22,7 +25,8 @@ apiHelper.getExploreInfo(type, page)
 .then(function (data){
 
   this.setState({
-    apiInfo: data
+    apiInfo: data.results,
+    totalPages: data.total_pages
   })
 }.bind(this)
 )
@@ -37,7 +41,7 @@ apiHelper.getExploreInfo(type)
 .then(function (data){
 
   this.setState({
-    apiInfo: data
+    apiInfo: data.results
   })
 }.bind(this)
 )
@@ -45,13 +49,16 @@ apiHelper.getExploreInfo(type)
 },
 
 // Update when pagination is used
-PageChange: function (number){
+PageChange: function (eventKey){
     var type = this.props.route.type
-    var page = number.selected + 1
+    var page = eventKey
+    this.setState({
+      activePage: eventKey
+    });
     apiHelper.getExploreInfo(type,page)
     .then(function (data){
         this.setState({
-        apiInfo: data
+        apiInfo: data.results
       })
     }.bind(this)
     )
@@ -65,17 +72,20 @@ PageChange: function (number){
         <div className="row">
           <Search type={this.props.route.type} />
         </div>
-        <ReactPaginate previousLabel={"previous"}
-               nextLabel={"next"}
-               breakLabel={<a href="">...</a>}
-               breakClassName={"break-me"}
-               pageCount={this.state.total_pages}
-               marginPagesDisplayed={2}
-               pageRangeDisplayed={5}
-               onPageChange = {this.PageChange}
-               containerClassName={"pagination"}
-               subContainerClassName={"pages pagination"}
-               activeClassName={"active"} />
+
+        <Pagination
+               prev
+               next
+               first
+               last
+               ellipsis
+               boundaryLinks
+               items={this.state.totalPages}
+               maxButtons={4}
+               onSelect = {this.PageChange}
+               activePage={this.state.activePage}
+             />
+
         <DisplayGridContainer data={this.state.apiInfo} type={this.props.route.type}/>
 
       </div>

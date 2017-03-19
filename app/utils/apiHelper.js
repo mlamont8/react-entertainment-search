@@ -43,11 +43,9 @@ var helpers = {
 
     return fetchJsonp('https://api.themoviedb.org/3/'+type+'/popular?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=' + page)
       .then (function(response){
-
         return response.json()
   }).then(function(json) {
-
-    return json.results
+    return json
     })
   .catch(function(ex) {
     console.log('PopularFetch Movie Failure', ex)
