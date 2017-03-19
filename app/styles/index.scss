@@ -34,18 +34,25 @@ body{
   margin-top: 10px;
 }
 
-.halfPopStyle{
-  min-height: 350px;
+.halfPop{
+  height: 350px;
   margin: 0;
+  padding: 0;
 }
 
 .quarterPop {
   padding: 0;
-  height: 175px;
+  height: 350px;
 
 }
 
 .smallPopImg {
   height: 175px;
   padding: 0;
+}
+
+.popImage {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }

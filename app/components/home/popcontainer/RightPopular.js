@@ -11,7 +11,7 @@ var RightPopular= React.createClass({
 
   render: function () {
     return(
-      <Col className="rightContainer quarterPop" sm={12} md={6}>
+      <Col className="rightContainer quarterPop" sm={12} md={12} lg={6}>
 
 
         { this.props.SmallImage.map((SmallImage, index) =>

@@ -1,10 +1,11 @@
 var React = require('react')
-var styles = require('../../../styles')
+var css = require('../../../styles/index.scss')
+var Image = require('react-bootstrap').Image
 
 var ImageView = function(props){
 
     return (
-        <img className="responsive-img" style = {styles.largeImage} src = {'https://image.tmdb.org/t/p/w780' + props.imageSrc} />
+        <Image className="popImage" responsive src = {'https://image.tmdb.org/t/p/w780' + props.imageSrc} />
     )
 
 }
