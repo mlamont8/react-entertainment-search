@@ -28,6 +28,28 @@ body{
   position: fixed;
 }
 
+.navigation{
+
+		display: flex;
+		height: 37px;
+		align-items: center;
+		padding: 0 10px;
+
+		li {
+			font-weight: 400;
+			padding: 7px 10px;
+			font-size: 14px;
+			transition: background .125s ease;
+			border-radius: 3px;
+
+			&:hover {
+				background: $redColor;
+				cursor: pointer;
+			}
+		}
+
+}
+
 .headerFont {
   background-color: $redColor;
   height: 40px;

@@ -11,9 +11,9 @@ var FooterContainer = React.createClass({
   render: function(){
     return(
       <footer className="page-footer container" style={styles.footer}>
-{/* <div className="container"> */}
+<div className="container">
   <Row className="row">
-    <Col md={4} sm={12} className="col m4 s12 footerArea right">
+    <Col md={4} sm={12} className="footerArea right">
 
      <Image responsive className="poweredBy black" style={{paddingTop: '10px'}} src={img} />
 
@@ -26,7 +26,7 @@ var FooterContainer = React.createClass({
 
 </Col>
 </Row>
-    {/* </div> */}
+    </div>
 </footer>
     )
   }

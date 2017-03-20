@@ -25,9 +25,9 @@ getInitialState() {
                 <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav bsStyle="pills" pullRight>
+          <Nav className="navigation" bsStyle="pills" pullRight>
 
-            <LinkContainer className="home-link headerFont" to="/"><NavItem eventKey={1}>Home</NavItem></LinkContainer>
+            {/* <LinkContainer className="home-link headerFont" to="/"><NavItem eventKey={1}>Home</NavItem></LinkContainer> */}
             <LinkContainer className="movie-link headerFont" to="/explore/movie"><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
             <LinkContainer className="tv-link headerFont" to="/explore/tv"><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
 
