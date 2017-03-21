@@ -6,9 +6,9 @@ var detailPoster = function (props){
 return (
 
 
-<div className="detailbackground" style={{position: 'absolute'}}>
+<div className="detailPoster" style={{position: 'relative'}}>
 
-  <Image className="backImage" style={{overflow: 'hidden'}} src={'https://image.tmdb.org/t/p/w1280' + props.image} />
+  <Image responsive className="backImage" style={{overflow: 'hidden'}} src={'https://image.tmdb.org/t/p/w1280' + props.image} />
 
 
 </div>

@@ -1,5 +1,5 @@
 var React = require('react')
-var styles = require('../styles')
+var css = require('../styles/index.scss')
 var img = require('../images/poweredbytmdb.png')
 var Row = require('react-bootstrap').Row
 var Col = require('react-bootstrap').Col
@@ -10,7 +10,7 @@ var FooterContainer = React.createClass({
 
   render: function(){
     return(
-      <footer className="page-footer container" style={styles.footer}>
+      <footer className="footer">
 <div className="container">
   <Row className="row">
     <Col md={4} sm={12} className="footerArea right">

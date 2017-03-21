@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
-$redColor: #b71c1c;
-$offRed: #ff8a80;
+$mainColor: #b71c1c;
+$secondaryColor: #ff8a80;
 $titleFont: 'Open Sans', sans-serif;
 
 
@@ -11,14 +11,14 @@ body{
 .navbar-default .navbar-brand{
   font-family: $titleFont;
   font-size: 45px;
-  color: $redColor;
+  color: $mainColor;
   text-shadow: 1px 1px 2px black;
 
 }
 
 .titleBlock {
   height: 150px;
-  background-color: $redColor;
+  background-color: $mainColor;
   color: #ffffff;
   padding: 40px;
   border-style: solid;
@@ -38,6 +38,7 @@ body{
   z-index: 5;
   margin-bottom: 0;
   position: fixed;
+
 }
 
 .navigation{
@@ -55,12 +56,12 @@ body{
 			border-radius: 10px;
       margin:  20px 30px 0 0;
       .active{
-        background-color: $offRed;
+        background-color: $secondaryColor;
       }
 
 
 			&:hover {
-				background: $offRed;
+				background: $secondaryColor;
 				cursor: pointer;
 			}
       a{
@@ -71,8 +72,13 @@ body{
 
 }
 
+.homeLink a{
+  background-color: $mainColor !important;
+  background-image: none;
+}
+
 .headerFont {
-  background-color: $redColor;
+  background-color: $mainColor;
   height: 40px;
   margin-top: 10px;
 }
@@ -91,12 +97,12 @@ body{
 .pagination>.active>span,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover {
-  background-color: $redColor;
-  border-color: $redColor;
+  background-color: $mainColor;
+  border-color: $mainColor;
 }
 
 .pagination>li>a {
-  color: $redColor;
+  color: $mainColor;
 }
 
 .halfPop{
@@ -128,16 +134,23 @@ body{
   border-radius: 2px;
   opacity: .8;
   padding: 10px;
-  margin-top: 300px;
+  margin-top: 100px;
   color: #ffffff;
 }
 
 .boxCover {
   position: relative;
   opacity: .9;
-  margin-top: 50px;
+  margin-top: -600px;
 
   img{
     margin-left: -15px;
   }
+}
+
+.footer{
+  position: relative;
+  bottom: 0;
+  background-color: #000000;
+
 }
