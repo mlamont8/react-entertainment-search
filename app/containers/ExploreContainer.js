@@ -80,6 +80,7 @@ PageChange: function (eventKey){
                last
                ellipsis
                boundaryLinks
+               bsSize = 'small'
                items={this.state.totalPages}
                maxButtons={4}
                onSelect = {this.PageChange}

@@ -1,13 +1,15 @@
 var React = require('react')
-var styles = require('../../styles')
+var css = require('../../styles/index.scss')
+var Col = require('react-bootstrap').Col
+var Image = require('react-bootstrap').Image
 
 var boxImage = function(props){
 
   return(
 
-    <div className="posterContainer col s12 m3" style={styles.boxCover}>
-      <img src={'https://image.tmdb.org/t/p/w185/' + props.path} className="responsive-image" />
-    </div>
+    <Col sm={12} md={3} className="boxCover col s12 m3">
+      <Image src={'https://image.tmdb.org/t/p/w185/' + props.path} className="responsive-image" />
+    </Col>
   )
 }
 

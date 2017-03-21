@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
 $redColor: #b71c1c;
+$offRed: #ff8a80;
+$titleFont: 'Open Sans', sans-serif;
+
 
 body{
   background-color: #ffffff;
+}
+
+.navbar-default .navbar-brand{
+  font-family: $titleFont;
+  font-size: 45px;
+  color: $redColor;
+  text-shadow: 1px 1px 2px black;
+
 }
 
 .titleBlock {
@@ -37,15 +49,24 @@ body{
 
 		li {
 			font-weight: 400;
-			padding: 7px 10px;
+			padding: 0px;
 			font-size: 14px;
-			transition: background .125s ease;
-			border-radius: 3px;
+			border-top: 20px;
+			border-radius: 10px;
+      margin:  20px 30px 0 0;
+      .active{
+        background-color: $offRed;
+      }
+
 
 			&:hover {
-				background: $redColor;
+				background: $offRed;
 				cursor: pointer;
 			}
+      a{
+       padding-top: 10px;
+        color: #ffffff !important;
+      }
 		}
 
 }
@@ -54,6 +75,28 @@ body{
   background-color: $redColor;
   height: 40px;
   margin-top: 10px;
+}
+
+.searchForm {
+  width: 250px;
+  border: 2px solid rgba(245, 245, 241, 0.1);
+  color: #ffffff;
+  outline: none;
+  margin-left: 20px;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+  background-color: $redColor;
+  border-color: $redColor;
+}
+
+.pagination>li>a {
+  color: $redColor;
 }
 
 .halfPop{
@@ -87,4 +130,14 @@ body{
   padding: 10px;
   margin-top: 300px;
   color: #ffffff;
+}
+
+.boxCover {
+  position: relative;
+  opacity: .9;
+  margin-top: 50px;
+
+  img{
+    margin-left: -15px;
+  }
 }

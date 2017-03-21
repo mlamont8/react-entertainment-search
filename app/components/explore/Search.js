@@ -51,13 +51,14 @@ onSubmitTerm: function (e){
 
   <form className="col s3" onSubmit={this.handleSubmitTerm} style ={styles.searchform}>
     <div className="input-field white-text">
-      <i className="material-icons prefix">search</i>
     <input
       style={styles.inputArea}
       onChange={this.onUpdateUser}
       value={this.state.searchTerm}
       id="searchTextInput"
       type="text"
+      placeholder="Search for a title..."
+      className="searchForm"
        />
   </div>
 

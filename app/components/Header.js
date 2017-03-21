@@ -22,6 +22,9 @@ getInitialState() {
 
       <Navbar className="navStyles fixedTop">
         <Navbar.Header>
+            <Navbar.Brand>
+              <a href="/">Whats Out</a>
+            </Navbar.Brand>
                 <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
