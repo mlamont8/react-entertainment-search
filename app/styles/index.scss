@@ -67,6 +67,7 @@ body{
       a{
        padding-top: 10px;
         color: #ffffff !important;
+         border-radius: 10px;
       }
 		}
 
@@ -81,6 +82,21 @@ body{
   background-color: $mainColor;
   height: 40px;
   margin-top: 10px;
+}
+
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: $secondaryColor !important;
+  background-image: none;
+  color: #000000 !important;
+  padding-bottom: 10px;
+}
+
+.homeLink > a{
+  padding-bottom: 5px !important;
+  background-color: $mainColor !important;
+  border-radius: 10px;
+
 }
 
 .searchForm {

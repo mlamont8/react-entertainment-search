@@ -7,6 +7,8 @@ var NavItem = require('react-bootstrap').NavItem
 var Navbar = require('react-bootstrap').Navbar
 var MenuItem = require('react-bootstrap').MenuItem
 var LinkContainer = require('react-router-bootstrap').LinkContainer
+var Image = require('react-bootstrap').Image
+var IndexLinkContainer = require('react-router-bootstrap').IndexLinkContainer
 
 var Header = React.createClass({
 
@@ -23,14 +25,15 @@ getInitialState() {
       <Navbar className="navStyles fixedTop">
         <Navbar.Header>
             <Navbar.Brand>
-              <a href="/">Whats Out</a>
+              {/* <a href="/">Whats Out</a> */}
+              {/* <Image className = "logo" src={img} /> */}
             </Navbar.Brand>
                 <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav className="navigation" bsStyle="pills" pullRight>
 
-            {/* <LinkContainer className="homeLink headerFont" to="/"><NavItem eventKey={1}>Home</NavItem></LinkContainer> */}
+            <IndexLinkContainer className="homeLink headerFont" to="/"><NavItem eventKey={1}>Home</NavItem></IndexLinkContainer>
             <LinkContainer className="movie-link headerFont" to="/explore/movie"><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
             <LinkContainer className="tv-link headerFont" to="/explore/tv"><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
 

@@ -6,13 +6,18 @@ var BoxImage = require('../components/detail/boxImage')
 var DetailInfo = require('../components/detail/detailInfo')
 var styles = require('../styles')
 
+// var sectionStyle = {
+//   backgroundImage: "url(" + { background } + ")"
+// };
+
 var DetailContainer = React.createClass({
 
 getInitialState: function() {
   return {
     type: this.props.params.type,
     id: this.props.params.id,
-    info: ''
+    info: '',
+    background: ''
   }
 },
 
@@ -29,13 +34,16 @@ componentDidMount: function (){
     if (type === 'tv'){
         this.setState({
         info: data,
-        title: data.name
+        title: data.name,
+        background: 'https://image.tmdb.org/t/p/w1280' + data.backdrop_path
+
       })
     }else{
       // Type is Movie
       this.setState({
       info: data,
-      title: data.title
+      title: data.title,
+      background: "url(https://image.tmdb.org/t/p/w1280" + data.backdrop_path + ")"
     })
   }
 
@@ -46,12 +54,12 @@ componentDidMount: function (){
   render: function(){
 
     return (
-    <main>
+    <main style={{backgroundImage: this.state.background}}>
 
-
+{/*
         <DetailPoster
-        image = {this.state.info.backdrop_path} />
-
+        image = {this.state.info.backdrop_path} /> */}
+{/*
          <BoxImage path= {this.state.info.poster_path} />
 
 
@@ -61,9 +69,9 @@ componentDidMount: function (){
             overview={this.state.info.overview}
             rating={this.state.info.vote_average}
             homepage={this.state.info.homepage}
-          />
+          /> */}
 
-      
+
 
 </main>
 
