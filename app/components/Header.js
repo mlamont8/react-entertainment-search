@@ -22,16 +22,12 @@ getInitialState() {
     return(
 
 
-      <Navbar className="navStyles fixedTop">
+      <Navbar collapseOnSelect className="navStyles fixedTop">
         <Navbar.Header>
-            <Navbar.Brand>
-              {/* <a href="/">Whats Out</a> */}
-              {/* <Image className = "logo" src={img} /> */}
-            </Navbar.Brand>
                 <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav className="navigation" bsStyle="pills" pullRight>
+          <Nav className="navigation" pullRight>
 
             <IndexLinkContainer className="homeLink headerFont" to="/"><NavItem eventKey={1}>Home</NavItem></IndexLinkContainer>
             <LinkContainer className="movie-link headerFont" to="/explore/movie"><NavItem eventKey={2}>Movies</NavItem></LinkContainer>

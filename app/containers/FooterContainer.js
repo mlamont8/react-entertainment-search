@@ -21,7 +21,7 @@ var FooterContainer = React.createClass({
 
     <Col md={6} sm={12} className="col m6 s12 left">
     <span className="grey-text">This product uses the TMDb API but is not endorsed or certified by TMDb.</span>
-  <p className="grey-text text-lighten-4" style={{marginTop: '40px'}} > © 2017 Copyright M Lamont Taylor</p>
+  <p className="grey-text text-lighten-4" style={{marginTop: '80px'}} > © 2017 Copyright M Lamont Taylor</p>
 
 
 </Col>
