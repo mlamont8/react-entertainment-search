@@ -8,10 +8,10 @@ body{
   background-color: #ffffff;
 }
 
-.navbar-default .navbar-brand{
+.mainDividerTitle{
   font-family: $titleFont;
   font-size: 45px;
-  color: $mainColor;
+  color: #fff;
   text-shadow: 1px 1px 2px black;
 
 }
@@ -139,34 +139,38 @@ body{
 }
 
 .popImage {
-  height: 100%;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
 .detailInfo {
-  position: relative;
+
   background-color: #000000;
   border-radius: 2px;
-  opacity: .8;
   padding: 10px;
-  margin-top: 100px;
   color: #ffffff;
+  font-size: 16px;
 }
 
-.boxCover {
-  position: relative;
-  opacity: .9;
-  margin-top: -600px;
-
-  img{
-    margin-left: -15px;
-  }
+.inputArea {
+  height: 37px;
+  border: 2px solid rgba(255, 245, 241, 0.4);
+  border-radius: 37px;
+  font-size: 14px;
+  font-weight: 300px;
+  padding: 0 10px;
+  background: transparent;
+  outline: none;
+  margin-left: 20px;
+  color: #ffffff;
+  width: 250px;
 }
+
 
 .footer{
   position: relative;
   bottom: 0;
   background-color: #000000;
+  color: #ffffff;
 
 }

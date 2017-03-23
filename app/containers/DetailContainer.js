@@ -4,11 +4,9 @@ var DetailPoster = require('../components/detail/detailPoster')
 var DetailTitle = require('../components/detail/detailTitle')
 var BoxImage = require('../components/detail/boxImage')
 var DetailInfo = require('../components/detail/detailInfo')
-var styles = require('../styles')
+var Row = require('react-bootstrap').Row
 
-// var sectionStyle = {
-//   backgroundImage: "url(" + { background } + ")"
-// };
+
 
 var DetailContainer = React.createClass({
 
@@ -16,8 +14,8 @@ getInitialState: function() {
   return {
     type: this.props.params.type,
     id: this.props.params.id,
-    info: '',
-    background: ''
+    info: ''
+
   }
 },
 
@@ -34,16 +32,16 @@ componentDidMount: function (){
     if (type === 'tv'){
         this.setState({
         info: data,
-        title: data.name,
-        background: 'https://image.tmdb.org/t/p/w1280' + data.backdrop_path
+        title: data.name
+
 
       })
     }else{
       // Type is Movie
       this.setState({
       info: data,
-      title: data.title,
-      background: "url(https://image.tmdb.org/t/p/w1280" + data.backdrop_path + ")"
+      title: data.title
+
     })
   }
 
@@ -54,24 +52,28 @@ componentDidMount: function (){
   render: function(){
 
     return (
-    <main style={{backgroundImage: this.state.background}}>
-
-{/*
-        <DetailPoster
-        image = {this.state.info.backdrop_path} /> */}
-{/*
-         <BoxImage path= {this.state.info.poster_path} />
+    <main style={{paddingTop:'50px'}}>
 
 
-           <DetailInfo
-            tag= {this.state.info.tagline}
-            date={this.state.info.release_date}
-            overview={this.state.info.overview}
-            rating={this.state.info.vote_average}
-            homepage={this.state.info.homepage}
-          /> */}
+
+          <Row>
+              <BoxImage path= {this.state.info.poster_path} />
 
 
+                <DetailInfo
+                  tag= {this.state.info.tagline}
+                  date={this.state.info.release_date}
+                  overview={this.state.info.overview}
+                    rating={this.state.info.vote_average}
+                    homepage={this.state.info.homepage}
+                  />
+
+        </Row>
+        <Row style={{marginTop:'10px'}}>
+          <DetailPoster
+          image = {this.state.info.backdrop_path} />
+
+        </Row>
 
 </main>
 

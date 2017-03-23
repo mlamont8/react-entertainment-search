@@ -1,6 +1,5 @@
 var React = require('react')
-var RadioButtons = require('./RadioButtons')
-var styles = require('../../styles')
+var css = require('../../styles/index.scss')
 
 
 var Search = React.createClass({
@@ -49,16 +48,16 @@ onSubmitTerm: function (e){
 
   return(
 
-  <form className="col s3" onSubmit={this.handleSubmitTerm} style ={styles.searchform}>
+  <form className="col s3" onSubmit={this.handleSubmitTerm} style ={{width:'250px'}}>
     <div className="input-field white-text">
     <input
-      style={styles.inputArea}
+      // style={styles.inputArea}
       onChange={this.onUpdateUser}
       value={this.state.searchTerm}
       id="searchTextInput"
       type="text"
       placeholder="Search for a title..."
-      className="searchForm"
+      className="inputArea"
        />
   </div>
 

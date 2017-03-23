@@ -2,7 +2,6 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var ImageView = require('./ImageView')
-var ImageTitle = require('./ImageTitle')
 var css = require('../../../styles/index.scss')
 var Col = require('react-bootstrap').Col
 

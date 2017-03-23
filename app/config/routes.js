@@ -13,7 +13,7 @@ var SearchContainer = require('../containers/SearchContainer')
 
 
 var routes = (
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
       <Route path='explore/tv' type = 'tv' component={ExploreContainer} />

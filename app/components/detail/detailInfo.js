@@ -8,15 +8,15 @@ var Col = require('react-bootstrap').Col
 var detailInfo = function (props){
 
   return(
-    
-    <Row>
-      <Col sm={12} md={9} className='detailInfo'>
-    <p>Release Date: {props.date}</p>
-    <span className="description">{props.overview}</span>
-    <p>Rating: {props.rating} of 10.0</p>
-    <p><span className="homepage"><a href={props.homepage}>HOMEPAGE</a></span></p>
+
+
+      <Col  md={12} lg={10} className='detailInfo'>
+        <p>Release Date: {props.date}</p>
+        <p className="description lead">{props.overview}</p>
+        <p>Rating: {props.rating} of 10.0</p>
+        <p><span className="homepage"><a href={props.homepage}>HOMEPAGE</a></span></p>
   </Col>
-  </Row>
+
   )
 }
 

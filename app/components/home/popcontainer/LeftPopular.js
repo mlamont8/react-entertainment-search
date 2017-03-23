@@ -2,7 +2,6 @@
 var React = require('react')
 var css = require('../../../styles/index.scss')
 var ImageView = require('./ImageView')
-var ImageTitle = require('./ImageTitle')
 var Col = require('react-bootstrap').Col
 
 

@@ -18,7 +18,7 @@ render: function(){
         {this.props.data.map(data => {
                 return (
 
-              <Col key={data.id} xs={6} sm={2}  className='col m6 l2 center-block' style={{padding: '5px'}}>
+              <Col key={data.id} lg={2} sm={4} xs={6} className=' gridCol' >
 
                 <Link to={'detail/'+ this.props.type +'/'+ data.id } >
                   <Image responsive src = {'https://image.tmdb.org/t/p/w154' + data.poster_path}
