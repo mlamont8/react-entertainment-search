@@ -29,9 +29,9 @@ getInitialState() {
         <Navbar.Collapse>
           <Nav className="navigation" pullRight>
 
-            <IndexLinkContainer className="homeLink headerFont" to="/"><NavItem eventKey={1}>Home</NavItem></IndexLinkContainer>
-            <LinkContainer className="movie-link headerFont" to="/explore/movie"><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
-            <LinkContainer className="tv-link headerFont" to="/explore/tv"><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
+            <IndexLinkContainer className="homeLink headerLinks" to="/"><NavItem eventKey={1}>Home</NavItem></IndexLinkContainer>
+            <LinkContainer className="movie-link headerLinks" to="/explore/movie"><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
+            <LinkContainer className="tv-link headerLinks" to="/explore/tv"><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
 
           </Nav>
           </Navbar.Collapse>
