@@ -9,6 +9,7 @@ var MenuItem = require('react-bootstrap').MenuItem
 var LinkContainer = require('react-router-bootstrap').LinkContainer
 var Image = require('react-bootstrap').Image
 var IndexLinkContainer = require('react-router-bootstrap').IndexLinkContainer
+var NavDropdown = require('react-bootstrap').NavDropdown
 
 var Header = React.createClass({
 
@@ -26,15 +27,30 @@ getInitialState() {
         <Navbar.Header>
                 <Navbar.Toggle />
         </Navbar.Header>
-        <Navbar.Collapse>
+  {/* Full Navbar */}
+      <Navbar.Collapse>
           <Nav className="navigation" pullRight>
 
             <IndexLinkContainer className="homeLink headerLinks" to="/"><NavItem eventKey={1}>Home</NavItem></IndexLinkContainer>
             <LinkContainer className="movie-link headerLinks" to="/explore/movie"><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
             <LinkContainer className="tv-link headerLinks" to="/explore/tv"><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
 
+            {/* <NavItem eventKey={1} href='/'>Home</NavItem>
+            <NavItem eventKey={2} href='explore/movie'>Movies</NavItem>
+            <NavItem eventKey={3} href='explore/tv'>TV Shows</NavItem> */}
+
           </Nav>
-          </Navbar.Collapse>
+      </Navbar.Collapse>
+{/* Mobile Navbar */}
+          {/* <Navbar.Collapse>
+            <NavDropdown className="nav-dropdown">
+
+              <IndexLinkContainer className="homeLink dropdownLinks" to="/"><NavItem eventKey={1}>Home</NavItem></IndexLinkContainer>
+              <LinkContainer className="movie-link dropdownLinks" to="/explore/movie"><NavItem eventKey={2}>Movies</NavItem></LinkContainer>
+              <LinkContainer className="tv-link dropdownLinks" to="/explore/tv"><NavItem eventKey={3}>TV Shows</NavItem></LinkContainer>
+
+            </NavDropdown>
+            </Navbar.Collapse> */}
         </Navbar>
 
 
