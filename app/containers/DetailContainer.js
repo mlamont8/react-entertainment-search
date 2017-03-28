@@ -61,6 +61,7 @@ componentDidMount: function (){
 
 
                 <DetailInfo
+                  title={this.state.title}
                   tag= {this.state.info.tagline}
                   date={this.state.info.release_date}
                   overview={this.state.info.overview}

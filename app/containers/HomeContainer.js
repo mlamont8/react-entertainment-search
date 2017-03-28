@@ -1,14 +1,11 @@
 var React = require('react');
-var TopContainer = require('./TopMainContainer');
-var BottomContainer = require('./BottomMainContainer');
 var MainDivider = require('../components/home/popcontainer/MainDivider')
-var Row = require('react-bootstrap').Row
 var apiHelper = require('../utils/apiHelper')
 
 
 
 
-var PopularContainer = React.createClass({
+var HomeContainer = React.createClass({
 
 getInitialState() {
   return {
@@ -22,6 +19,7 @@ componentDidMount() {
   .then(function (data){
     // generate a random image from the array between 1 and 10
     var randImage=Math.floor(Math.random()*11)
+    //put image link portion in state
     this.setState({
       backgroundImg: data[randImage].backdrop_path
     })
@@ -49,4 +47,4 @@ render: function () {
 }
 })
 
-module.exports = PopularContainer;
+module.exports = HomeContainer;
