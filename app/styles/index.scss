@@ -6,6 +6,7 @@ $titleFont: 'Open Sans', sans-serif;
 
 body{
   background-color: #ffffff;
+
 }
 
 .mainDividerTitle{
@@ -17,19 +18,27 @@ body{
 }
 
 .titleBlock {
-  height: 150px;
+  height: 80px;
   background-color: $mainColor;
   color: #ffffff;
   padding: 40px;
   border-style: solid;
   border-width: 3px;
   border-color: #FFFFFF;
+  opacity: 0.4;
+  margin-top: 300px;
 }
 
 .mainTitle {
   font-size: 23px;
   font-weight: 900;
   width: 80px;
+}
+
+.frontBackground{
+  height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .navStyles {

@@ -9,9 +9,9 @@ var MainDivider = function(){
     return (
         <Row>
           <Col className="col red darken-4 white-text titleBlock" xs={12} >
-            <span className="mainDividerTitle">
+            <p className="mainDividerTitle">
                 Whats Out
-            </span>
+            </p>
         </Col>
       </Row>
     )
