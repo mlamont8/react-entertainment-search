@@ -14,6 +14,8 @@ body{
   font-size: 45px;
   color: #fff;
   text-shadow: 1px 1px 2px black;
+  position: relative;
+  bottom: 30px;
 
 }
 
@@ -39,6 +41,7 @@ body{
   height: 750px;
   background-size: cover;
   background-repeat: no-repeat;
+  position: static;
 }
 
 .navStyles {
