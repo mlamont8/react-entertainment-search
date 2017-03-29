@@ -1,5 +1,7 @@
-var React = require('react')
-var css = require('../../styles/index.scss')
+import React from 'react';
+import css  from '../../styles/index.scss';
+
+
 
 
 var Search = React.createClass({

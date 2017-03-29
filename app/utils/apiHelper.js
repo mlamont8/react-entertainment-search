@@ -1,8 +1,11 @@
-var React = require('react')
-var fetchJsonp = require('fetch-jsonp')
+// var React = require('react')
+// var fetchJsonp = require('fetch-jsonp')
+
+import React from 'react';
+import fetchJsonp from 'fetch-jsonp';
 
 
-var helpers = {
+const helpers = {
 
   // Retrieve TV Show info for front page
   getTvInfo: function (){

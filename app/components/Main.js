@@ -1,10 +1,11 @@
-var React = require('react')
-var Header = require('./Header')
-var Footer = require('../containers/FooterContainer')
+
+import React from 'react';
+import Header from './Header';
+import Footer from '../containers/FooterContainer';
 
 
 
-class Main extends React.Component {
+export default class Main extends React.Component {
   render() {
     return(
       <main className="fullContain fullSite">
@@ -15,6 +16,3 @@ class Main extends React.Component {
     )
   }
 }
-
-
-module.exports = Main;

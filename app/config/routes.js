@@ -1,17 +1,14 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
-var browserHistory = ReactRouter.browserHistory;
-var IndexRoute = ReactRouter.IndexRoute;
-var Main = require('../components/Main');
-var ExploreContainer = require('../containers/ExploreContainer')
-var DetailContainer = require('../containers/DetailContainer')
-var SearchContainer = require('../containers/SearchContainer')
-var HomeContainer = require('../containers/HomeContainer')
+
+import React from 'react';
+import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import ExploreContainer from '../containers/ExploreContainer';
+import DetailContainer from '../containers/DetailContainer';
+import HomeContainer from '../containers/HomeContainer';
+import SearchContainer from '../containers/SearchContainer';
+import Main from '../components/Main';
 
 
-var routes = (
+const routes = (
   <Router history={browserHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={HomeContainer} />

@@ -1,8 +1,10 @@
 // Displays search results after a search
 
 var React = require('react')
-var DisplayGridContainer = require('./DisplayGridContainer')
+//var DisplayGridContainer = require('./DisplayGridContainer')
 var apiHelper = require('../utils/apiHelper')
+
+import DisplayGridContainer from './DisplayGridContainer';
 
 var SearchContainer =  React.createClass({
 

@@ -1,35 +1,35 @@
-var React = require('react')
-var css = require('../styles/index.scss')
-var img = require('../images/poweredbytmdb.png')
-var Row = require('react-bootstrap').Row
-var Col = require('react-bootstrap').Col
-var Image = require('react-bootstrap').Image
+
+import React from 'react';
+import css from '../styles/index.scss';
+import img from '../images/poweredbytmdb.png';
+import {Row, Col, Image} from 'react-bootstrap';
 
 
-var FooterContainer = React.createClass({
+class FooterContainer extends React.Component {
 
-  render: function(){
-    return(
-      <footer className="footer">
-<div className="container">
-  <Row className="row">
-    <Col md={4} sm={12} className="footerArea right">
+  render() {
+    return (
+  <footer className="footer">
+    <div className="container">
+      <Row className="row">
+          <Col md={4} sm={12} className="footerArea right">
 
-     <Image responsive className="poweredBy black" style={{paddingTop: '10px'}} src={img} />
+            <Image responsive className="poweredBy black" style={{paddingTop: '10px'}} src={img} />
 
-   </Col>
+          </Col>
 
-    <Col md={6} sm={12} className="col m6 s12 left">
-    <span className="grey-text">This product uses the TMDb API but is not endorsed or certified by TMDb.</span>
-  <p className="grey-text text-lighten-4" style={{marginTop: '80px'}} > © 2017 Copyright M Lamont Taylor</p>
+          <Col md={6} sm={12} className="col m6 s12 left">
+              <span className="grey-text">This product uses the TMDb API but is not endorsed or certified by TMDb.</span>
+              <p className="grey-text text-lighten-4" style={{marginTop: '80px'}} > © 2017 Copyright M Lamont Taylor</p>
 
 
-</Col>
-</Row>
+            </Col>
+          </Row>
     </div>
-</footer>
-    )
+  </footer>
+    );
   }
-})
 
-module.exports = FooterContainer
+}
+
+export default FooterContainer;
