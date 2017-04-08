@@ -1,7 +1,6 @@
 
 import React from 'react';
-import css from '../styles/index.scss';
-import {slide as Menu } from 'react-burger-menu';
+import {stack as Menu } from 'react-burger-menu';
 import { Link } from 'react-router';
 import Radium from 'radium';
 

@@ -12,14 +12,12 @@ class DisplayGridContainer extends React.Component {
       <Row className="row">
 
           {this.props.data.map(data => {
-                  return (
+              return (
 
                 <Col key={data.id} lg={2} sm={4} xs={6} className=' gridCol' >
 
                   <Link to={'detail/'+ this.props.type +'/'+ data.id } >
                     <Image responsive src = {'https://image.tmdb.org/t/p/w154' + data.poster_path}
-
-
                    />
                   </Link>
 
@@ -35,5 +33,9 @@ class DisplayGridContainer extends React.Component {
   }
 
 }
+DisplayGridContainer.propTypes = {
+    type: React.PropTypes.string.isRequired,
+    data: React.PropTypes.array.isRequired
+};
 
 export default DisplayGridContainer;

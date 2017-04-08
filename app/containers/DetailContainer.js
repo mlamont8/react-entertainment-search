@@ -5,6 +5,8 @@ import {Row} from 'react-bootstrap';
 import BoxImage from '../components/detail/BoxImage';
 import DetailInfo from '../components/detail/DetailInfo';
 import DetailPoster from '../components/detail/DetailPoster';
+import Loader from '../components/Loader';
+import Footer from './FooterContainer';
 
 
 export default class DetailContainer extends React.Component {
@@ -15,13 +17,14 @@ export default class DetailContainer extends React.Component {
       type: this.props.params.type,
       id: this.props.params.id,
       info: '',
-      title: ''
+      title: '',
+      isLoading: true
     }
   }
 
   componentDidMount() {
-    let type = this.state.type
-    let id = this.state.id
+    const type = this.state.type
+    const id = this.state.id
 
     apiHelper.getDetailInfo(type,id)
     .then (function(data){
@@ -30,7 +33,8 @@ export default class DetailContainer extends React.Component {
       if (type === 'tv'){
           this.setState({
           info: data,
-          title: data.name
+          title: data.name,
+          isLoading: false
 
 
         })
@@ -38,7 +42,8 @@ export default class DetailContainer extends React.Component {
         // Or if Type is Movie
         this.setState({
         info: data,
-        title: data.title
+        title: data.title,
+        isLoading: false
 
       })
     }
@@ -48,8 +53,13 @@ export default class DetailContainer extends React.Component {
   }
 
   render() {
-    return (
-          <main style={{paddingTop:'50px'}}>
+
+
+    return this.state.isLoading === true
+    ? <Loader />
+    :
+    
+        <main style={{paddingTop:'50px'}}>
 
                 <Row>
 
@@ -63,8 +73,8 @@ export default class DetailContainer extends React.Component {
                           rating={this.state.info.vote_average}
                           homepage={this.state.info.homepage}
                         />
-
               </Row>
+
               <Row style={{marginTop:'10px'}}>
 
                 <DetailPoster
@@ -74,7 +84,8 @@ export default class DetailContainer extends React.Component {
 
       </main>
 
-    );
+
+
   }
 
 }

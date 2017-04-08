@@ -1,6 +1,5 @@
 import React from 'react';
 import {Col, Row} from 'react-bootstrap';
-import css from '../../styles/index.scss';
 
 
 class MainDivider extends React.Component {

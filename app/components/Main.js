@@ -11,8 +11,7 @@ export default class Main extends React.Component {
       <main className="fullContain fullSite">
         <Header />
       {this.props.children}
-      <Footer />
-    </main>
+      </main>
     )
   }
 }
