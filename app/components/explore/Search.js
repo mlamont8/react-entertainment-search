@@ -50,6 +50,7 @@ onSubmitTerm: function (e){
 
   return(
 
+<div className="row">
   <form className="col s3" onSubmit={this.handleSubmitTerm} style ={{width:'250px'}}>
     <div className="input-field white-text">
     <input
@@ -64,7 +65,7 @@ onSubmitTerm: function (e){
   </div>
 
 </form>
-
+</div>
 )
 }
   })
