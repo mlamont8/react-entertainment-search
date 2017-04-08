@@ -4,7 +4,7 @@ import {Row, Col} from 'react-bootstrap';
 
 
 
-export default class DetailInfo extends React.Component {
+class DetailInfo extends React.Component {
 
   render() {
     return (
@@ -14,9 +14,18 @@ export default class DetailInfo extends React.Component {
         <p className="description lead">{this.props.overview}</p>
         <p>Rating: {this.props.rating} of 10.0</p>
         <p><span className="homepage"><a href={this.props.homepage}>HOMEPAGE</a></span></p>
-  </Col>
+      </Col>
 
     );
   }
 
 }
+
+DetailInfo.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  data: React.PropTypes.string,
+  overview: React.PropTypes.string,
+  rating: React.PropTypes.number,
+  homepage: React.PropTypes.string
+};
+  export default DetailInfo;

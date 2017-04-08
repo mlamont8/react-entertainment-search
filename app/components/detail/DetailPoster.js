@@ -13,4 +13,8 @@ class DetailPoster extends React.Component {
 
 }
 
+DetailPoster.propTypes = {
+    image: React.PropTypes.string
+};
+
 export default DetailPoster;

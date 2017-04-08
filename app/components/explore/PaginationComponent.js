@@ -75,7 +75,7 @@ class PaginationComponent extends React.Component {
           items = {this.state.totalPages}
           maxButtons = {4}
           onSelect = {this.PageChange.bind(this)}
-          activePage={this.props.activePage}
+          activePage={this.state.activePage}
         />
 
         <DisplayGridContainer data={this.state.apiInfo} type={this.props.type}/>
@@ -84,5 +84,8 @@ class PaginationComponent extends React.Component {
   }
 
 }
+PaginationComponent.propTypes = {
+    type: React.PropTypes.string.isRequired
+};
 
 export default PaginationComponent;
