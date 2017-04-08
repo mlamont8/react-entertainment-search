@@ -58,11 +58,11 @@ export default class DetailContainer extends React.Component {
     return this.state.isLoading === true
     ? <Loader />
     :
-    
+
         <main style={{paddingTop:'50px'}}>
 
                 <Row>
-
+                  <div className="container">
                     <BoxImage path= {this.state.info.poster_path} />
 
                       <DetailInfo
@@ -70,9 +70,10 @@ export default class DetailContainer extends React.Component {
                         tag= {this.state.info.tagline}
                         date={this.state.info.release_date}
                         overview={this.state.info.overview}
-                          rating={this.state.info.vote_average}
-                          homepage={this.state.info.homepage}
+                        rating={this.state.info.vote_average}
+                        homepage={this.state.info.homepage}
                         />
+                      </div>
               </Row>
 
               <Row style={{marginTop:'10px'}}>
