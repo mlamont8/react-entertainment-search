@@ -1,6 +1,3 @@
-// var React = require('react')
-// var fetchJsonp = require('fetch-jsonp')
-
 import React from 'react';
 import fetchJsonp from 'fetch-jsonp';
 
