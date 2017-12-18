@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
 $mainColor: #b71c1c;
 $secondaryColor: #ff8a80;
-$titleFont: 'Open Sans', sans-serif;
+$titleFont: 'Montserrat', sans-serif;
 
 
 body{
@@ -11,7 +11,8 @@ body{
 
 .mainDividerTitle{
   font-family: $titleFont;
-  font-size: 45px;
+  font-size: 70px;
+  letter-spacing: -.05em;
   color: #fff;
   text-shadow: 1px 1px 2px black;
   position: relative;
@@ -21,14 +22,24 @@ body{
 
 .titleBlock {
   height: 80px;
-  background-color: $mainColor;
   color: #ffffff;
-  padding: 40px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #FFFFFF;
-  opacity: 0.4;
-  margin-top: 300px;
+  padding: 35px;
+  margin-top: 275px;
+}
+
+.subTitle {
+  
+  text-shadow: 1px 1px 2px black;
+  font-family: $titleFont;
+  font-size: 20px;
+  padding-top: 50px;
+  span {
+    padding: 30px;
+    letter-spacing: -.05em;
+    a {
+      color:#fff;
+    }
+  }
 }
 
 .mainTitle {
@@ -42,6 +53,9 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   position: static;
+}
+.tvButton{
+  margin-left: 70px;
 }
 
 .navStyles {
