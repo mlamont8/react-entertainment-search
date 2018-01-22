@@ -1,9 +1,12 @@
 import { combineReducers } from 'redux'
-import users from './users'
+import { routerReducer } from 'react-router-redux'
+import front from './front'
 
 const entApp = combineReducers({
 
-  users
+  front,
+  routing: routerReducer
+
 
 })
 
