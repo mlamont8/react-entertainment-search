@@ -3,7 +3,7 @@
 import React from 'react';
 import apiHelper from '../utils/apiHelper';
 import DisplayGridContainer from './DisplayGridContainer';
-
+import Search from '../components/explore/Search'
 
 
 class SearchContainer extends React.Component {
@@ -31,6 +31,7 @@ componentDidMount() {
   render() {
     return (
             <div style={{backgroundColor: '#000000', paddingTop: '80px'}}>
+              <Search type={this.props.location.query.type} />
               <DisplayGridContainer
                 data={this.state.apiInfo}
                 type ={this.props.location.query.type}/>
