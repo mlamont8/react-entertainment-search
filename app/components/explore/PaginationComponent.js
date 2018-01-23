@@ -15,6 +15,7 @@ class PaginationComponent extends React.Component {
     }
   }
   componentDidMount(){
+    // console.log('pagi', this.props.exploreData)
     const type = this.props.type
     const page = 1
     apiHelper.getExploreInfo(type, page)
@@ -62,6 +63,8 @@ class PaginationComponent extends React.Component {
   }
 
   render() {
+    
+    console.log('pagi2', this.props.exploreFetch)
     return (
       <div>
         <Pagination

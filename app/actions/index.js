@@ -66,7 +66,8 @@ return (dispatch) => {
       })
       .then((response) => response.json())
       .then((json) =>
-          dispatch(itemsFetchExploreSuccess(json.results)))
+           
+          dispatch(itemsFetchExploreSuccess(json)))
       .catch(() => dispatch(itemsHasErrored(true)));
 
     }
@@ -74,6 +75,7 @@ return (dispatch) => {
 
 
   export function itemsFetchExploreSuccess(items) {
+      console.log(items)
   return {
       type: 'ITEMS_FETCH_EXPLORE_SUCCESS',
       items

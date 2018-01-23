@@ -15,14 +15,18 @@ class ExploreContainer extends React.Component {
     const type = this.props.route.type
     this.props.fetch(type, 1)
   }
-
+// Add is fetching
   render() {
+    console.log('explore data',this.props.path.exploreResults.exploreResults)
     return (
       <div className= "container" style={{backgroundColor: '#000000', paddingTop: '80px'}}>
 
           <Search type={this.props.route.type} />
 
-          <Pagination type={this.props.route.type}/>
+          <Pagination 
+          type={this.props.route.type}
+          exploreFetch={this.props.path.exploreResults.exploreResults}
+          />
 
       </div>
     );
