@@ -1,9 +1,20 @@
 
-export default function exploreData(state={}, action){
+let initialState = {
+  exploreResults: {},
+  isLoading: false
+
+}
+
+export default function exploreData(state=initialState, action){
   switch(action.type) {
-    case 'ITEMS_FETCH_EXPLORE_SUCCESS':
+    case 'EXPLORE_FETCH_SUCCESS':
       return Object.assign({}, state, {
-        exploreResults: action.items
+        exploreResults: action.items,
+        isLoading: false
+      })
+      case 'EXPLORE_REQUEST':
+      return Object.assign({}, state, {
+        isLoading: true
       })
       default:
         return state;

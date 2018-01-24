@@ -4,41 +4,41 @@ import fetchJsonp from 'fetch-jsonp';
 
   export function fetchFrontData(){
 return (dispatch) => {
-    dispatch(itemsIsLoading(true));
+    dispatch(frontIsLoading(true));
     fetchJsonp('https://api.themoviedb.org/3/movie/upcoming/?api_key=21b0daca9dad79653c91d176b7930bee')
         .then((response) => {
             if (!response.ok) {
                 throw Error(response.statusText);
             }
-            dispatch(itemsIsLoading(false));
+            dispatch(frontIsLoading(false));
             return response;
         })
         .then((response) => response.json())
         .then((json) =>
-            dispatch(itemsFetchDataSuccess(json.results)))
-        .catch(() => dispatch(itemsHasErrored(true)));
+            dispatch(frontFetchDataSuccess(json.results)))
+        .catch(() => dispatch(frontHasErrored(true)));
 
       }
     }
 
-    export function itemsFetchDataSuccess(items) {
+    export function frontFetchDataSuccess(items) {
     return {
-        type: 'ITEMS_FETCH_DATA_SUCCESS',
+        type: 'FRONT_FETCH_DATA_SUCCESS',
         url: items[4].backdrop_path
     };
 }
 
-export function itemsHasErrored(bool) {
-  console.log('item has errored')
+export function frontHasErrored(bool) {
+  console.log('front has errored')
     return {
-        type: 'ITEMS_HAS_ERRORED',
+        type: 'FRONT_HAS_ERRORED',
         hasErrored: bool
     };
 }
 
-export function itemsIsLoading(bool) {
+export function frontIsLoading(bool) {
     return {
-        type: 'ITEMS_IS_LOADING',
+        type: 'FRONT_IS_LOADING',
         isLoading: bool
     };
 }
@@ -55,29 +55,45 @@ export function searchTerm(term) {
 export function fetchExploreData(type, page){
   console.log(type, page)
 return (dispatch) => {
-  dispatch(itemsIsLoading(true));
+  dispatch(exploreRequest());
   fetchJsonp('https://api.themoviedb.org/3/'+type+'/popular?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=' + page)
       .then((response) => {
           if (!response.ok) {
               throw Error(response.statusText);
           }
-          dispatch(itemsIsLoading(false));
+        //   dispatch(exploreIsLoading(false));
           return response;
       })
-      .then((response) => response.json())
+      .then((response) => response.json()
+      
+    )
       .then((json) =>
-           
-          dispatch(itemsFetchExploreSuccess(json)))
-      .catch(() => dispatch(itemsHasErrored(true)));
+          dispatch(exploreFetchSuccess(json)))
+      .catch(() => dispatch(exploreHasErrored(true)));
 
     }
   }
 
 
-  export function itemsFetchExploreSuccess(items) {
+  export function exploreFetchSuccess(items) {
       console.log(items)
   return {
-      type: 'ITEMS_FETCH_EXPLORE_SUCCESS',
+      type: 'EXPLORE_FETCH_SUCCESS',
       items
   };
 }
+
+export function exploreHasErrored(bool) {
+    console.log('explore has errored')
+      return {
+          type: 'EXPLORE_HAS_ERRORED',
+          hasErrored: bool
+      };
+  }
+  
+  export function exploreRequest() {
+      return {
+          type: 'EXPLORE_REQUEST',
+          
+      };
+  }

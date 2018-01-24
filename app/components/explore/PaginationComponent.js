@@ -64,7 +64,7 @@ class PaginationComponent extends React.Component {
 
   render() {
     
-    console.log('pagi2', this.props.exploreFetch)
+    console.log('pagi2', this.props.exploreFetch.results)
     return (
       <div>
         <Pagination
@@ -75,12 +75,12 @@ class PaginationComponent extends React.Component {
           ellipsis
           boundaryLinks
           bsSize = 'small'
-          items = {this.state.totalPages}
+          items = {this.props.exploreFetch.total_pages}
           maxButtons = {4}
           onSelect = {this.PageChange.bind(this)}
           activePage={this.state.activePage}
         />
-
+          {/*  move to explore container */}
         <DisplayGridContainer data={this.state.apiInfo} type={this.props.type}/>
     </div>
     );

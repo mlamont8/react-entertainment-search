@@ -6,6 +6,7 @@ import DisplayGridContainer from './DisplayGridContainer';
 import Search  from '../components/explore/Search';
 import apiHelper from '../utils/apiHelper';
 import Pagination from '../components/explore/PaginationComponent';
+import Loader from '../components/Loader';
 
 
 
@@ -17,19 +18,21 @@ class ExploreContainer extends React.Component {
   }
 // Add is fetching
   render() {
-    console.log('explore data',this.props.path.exploreResults.exploreResults)
-    return (
+    console.log('explore data',this.props.data)
+    return this.props.data.isLoading === true
+    ? <Loader />
+    :
       <div className= "container" style={{backgroundColor: '#000000', paddingTop: '80px'}}>
 
           <Search type={this.props.route.type} />
 
           <Pagination 
           type={this.props.route.type}
-          exploreFetch={this.props.path.exploreResults.exploreResults}
+           exploreFetch={this.props.data.exploreResults}
           />
 
       </div>
-    );
+    
   }
 
 }
@@ -38,7 +41,7 @@ class ExploreContainer extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    path: state
+    data: state.exploreResults
   }
 }
 
