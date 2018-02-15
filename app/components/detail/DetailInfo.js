@@ -7,7 +7,7 @@ class DetailInfo extends React.Component {
 
   render() {
     return (
-  
+
       <Col  md={12} lg={10} className='detailInfo'>
         <h1>{this.props.title}</h1>
         <p>Release Date: {this.props.date}</p>
@@ -15,8 +15,6 @@ class DetailInfo extends React.Component {
         <p>Rating: {this.props.rating} of 10.0</p>
         <p><span className="homepage"><a href={this.props.homepage}>HOMEPAGE</a></span></p>
       </Col>
-
-
     );
   }
 

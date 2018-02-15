@@ -8,7 +8,6 @@ class MainDivider extends React.Component {
   render() {
     return (
       <Row>
-
         <Row>
         <Col className="white-text text-center titleBlock" xs={12} >
           <p className="mainDividerTitle">

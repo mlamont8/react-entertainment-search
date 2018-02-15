@@ -5,7 +5,6 @@ class Loader extends React.Component {
   render() {
     return (
       <div id="loader">
-      
       </div>
     );
   }

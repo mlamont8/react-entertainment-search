@@ -12,10 +12,8 @@ export default class BoxImage extends React.Component {
           <Col md={12} lg={2} className="boxCover">
             <Image responsive src={'https://image.tmdb.org/t/p/w185/' + path} className="boxCoverImg" />
           </Col>
-
-
-    );
-  }
+          );
+          }
 
 }
 
