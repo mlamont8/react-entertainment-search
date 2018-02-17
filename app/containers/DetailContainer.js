@@ -25,42 +25,27 @@ export default class DetailContainer extends React.Component {
   componentDidMount() {
     const type = this.state.type
     const id = this.state.id
-
     apiHelper.getDetailInfo(type,id)
-    .then (function(data){
-
-      // Check if type is TV
-      if (type === 'tv'){
-          this.setState({
-          info: data,
-          title: data.name,
-          isLoading: false
-
-
-        })
-      }else{
-        // Or if Type is Movie
-        this.setState({
-        info: data,
-        title: data.title,
-        isLoading: false
-
-      })
-    }
-
-    }.bind(this)
-  )
+    .then
+        (data => {
+          // Check type..., set state for title accordingly
+        const titleType = (type === 'tv')
+          ? data.name
+          : data.title
+                this.setState({
+                info: data,
+                title: titleType,
+                isLoading: false
+              })
+            }
+          )
   }
 
   render() {
-
-
     return this.state.isLoading === true
     ? <Loader />
     :
-
         <main style={{paddingTop:'50px'}}>
-
                 <Row>
                   <div className="container">
                     <BoxImage path= {this.state.info.poster_path} />
@@ -77,16 +62,10 @@ export default class DetailContainer extends React.Component {
               </Row>
 
               <Row style={{marginTop:'10px'}}>
-
                 <DetailPoster
                 image = {this.state.info.backdrop_path} />
-
               </Row>
-
       </main>
-
-
-
   }
 
 }
