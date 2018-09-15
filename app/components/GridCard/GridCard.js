@@ -8,13 +8,27 @@ const GridCard = ({ data, type }) => {
   return (
     <div className="gridImages">
       {data.map(imageData => {
+        const title = type === "tv" ? imageData.name : imageData.title;
+        const overview =
+          imageData.overview
+            .split(" ")
+            .slice(0, 15)
+            .join(" ") + "...";
         return (
           <div className="card" key={imageData.id}>
             <Link to={"detail/" + type + "/" + imageData.id}>
-              <Image
-                responsive
-                src={"https://image.tmdb.org/t/p/w154" + imageData.poster_path}
-              />
+              <div className="gridImageBox">
+                <img
+                  className="gridImage"
+                  src={
+                    "https://image.tmdb.org/t/p/w154" + imageData.poster_path
+                  }
+                />
+              </div>
+              <div className="gridCardContent">
+                <h2>{title}</h2>
+                <p>{overview}</p>
+              </div>
             </Link>
           </div>
         );

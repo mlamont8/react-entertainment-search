@@ -1,8 +1,70 @@
+// container of image results
 .gridImages {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  // Individual cards
   .card {
+    position: relative;
+    flex: 0 0 150px;
     margin: 15px;
+    border-radius: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+
+    // box that contains images
+    .gridImageBox {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+    }
+
+    // written content for cards
+    .gridCardContent {
+      position: absolute;
+      color: white;
+      width: 100%;
+      height: 60%;
+      bottom: -100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: 0.5s;
+      background: linear-gradient(0deg, #c21833, transparent);
+      h2 {
+        margin: 0 0 10px;
+        padding: 0;
+        color: #fff;
+        font-size: 12px;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 10px;
+      }
+    }
   }
+}
+
+// movement on hover
+.gridImages .card:hover {
+  transform: translateY(-20px);
+}
+
+// opacity on hover
+.gridImages .card:hover .gridImageBox {
+  opacity: 0.5;
+  img {
+    width: 100%;
+  }
+}
+
+// show title and content on hover
+.gridImages .card:hover .gridCardContent {
+  bottom: 0;
 }
