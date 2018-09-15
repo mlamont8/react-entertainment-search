@@ -26,7 +26,10 @@ export function frontFetchDataSuccess(items) {
   const randomNum = Math.floor(Math.random() * Math.floor(19));
   return {
     type: "FRONT_FETCH_DATA_SUCCESS",
-    url: items[randomNum].backdrop_path
+    url: items[randomNum].backdrop_path,
+    title: items[randomNum].title,
+    overview: items[randomNum].overview,
+    id: items[randomNum].id
   };
 }
 
